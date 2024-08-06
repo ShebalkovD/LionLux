@@ -9,7 +9,7 @@
 
 <body>
     <header class="header">
-            <nav class="nav">
+            <nav class="nav " id="nav">
                 <div class="container">
                     <a href="index.html" class="nav_logo">
                         <img src="src/img/header_logo.svg" alt="">
@@ -28,6 +28,8 @@
                     <a href="#" class="nav_contacts">Контакты</a>
                 </div>
             </nav>
+
+             <div class="header_observertrigger"></div>
     </header>
 
     <main class="main">
@@ -67,10 +69,17 @@
                 </div>
             </a>
 
-            <div class="line"></div>
-            <div class="line2"></div>
+            <div class="line" >
+                <div class="line_inner" id="line"></div>
+            </div>
+            <div class="line2" >
+                <div class="line_inner" id="line2"></div>
+            </div>
         </section>
     </main>
 
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/category.js"></script>
 </body>
 </html>
