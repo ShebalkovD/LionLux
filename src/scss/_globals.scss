@@ -1,0 +1,62 @@
+@import "fonts.scss";
+
+// Основные цвета
+$accent: #A4814E;
+$section_bg: #15161D;
+
+// Тень для объектов
+$shadow: 2px 4px 22px rgba(0, 0, 0, 0.1);
+
+
+
+
+html {
+    font-size: 10px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: $section_bg;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 8rem 0;
+}
+
+.btn {
+    width: 20rem;
+    height: 6rem;
+
+    background-color: #fff;
+    color: $section_bg;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 1.8rem;
+
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-0.5rem);
+    }
+}

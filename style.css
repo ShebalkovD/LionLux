@@ -1,0 +1,468 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-weight: 200; /* Соответствует значению normal */
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-Light.ttf");
+}
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-Regular.ttf");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-Medium.ttf");
+}
+@font-face {
+  font-weight: 600;
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-SemiBold.ttf");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-Bold.ttf");
+}
+@font-face {
+  font-weight: 800;
+  font-family: "Manrope";
+  src: url("src/fonts/static/Manrope-ExtraBold.ttf");
+}
+html {
+  font-size: 10px;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #15161D;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+.btn {
+  width: 20rem;
+  height: 6rem;
+  background-color: #fff;
+  color: #15161D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.btn:hover {
+  -webkit-transform: translateY(-0.5rem);
+      -ms-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.header {
+  position: relative;
+}
+.header .nav {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.header .nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+}
+.header .nav_logo {
+  width: 2.8rem;
+  height: 2.8rem;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header .nav_logo:hover {
+  opacity: 1;
+}
+.header .nav_list-item {
+  opacity: 0.8;
+  margin: 0 1.2rem;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header .nav_list-item:hover {
+  opacity: 1;
+}
+.header .nav_contacts {
+  opacity: 0.8;
+  margin: 0 1.2rem;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header .nav_contacts:hover {
+  opacity: 1;
+}
+
+.main .first {
+  padding-top: 6rem;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(179.11deg, #1F233F -33.3%, #15161D 65.85%);
+}
+.main .first_logo {
+  width: 91rem;
+  height: 20rem;
+  max-width: 90%;
+}
+.main .first_divider {
+  width: 60rem;
+  height: 2px;
+  background-color: #A4814E;
+  margin-top: 6.4rem;
+}
+.main .first_subtitle {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+}
+.main .first .btn {
+  margin-top: 6.4rem;
+  -webkit-animation: first_btn 2.5s ease-in-out infinite;
+          animation: first_btn 2.5s ease-in-out infinite;
+}
+@-webkit-keyframes first_btn {
+  0% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+@keyframes first_btn {
+  0% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+.main .category {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* @keyframes text_line {
+      0% {
+          transform: translateY(-100%);
+      }
+
+      100% {
+          transform: translateY(0);
+      }
+  }
+  @keyframes text_text {
+      0% {
+          transform: translateX(-100%);
+      }
+
+      100% {
+          transform: translateY(0);
+      }
+  } */
+}
+.main .category_divider {
+  background: #15161D;
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+.main .category_triangle {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
+}
+.main .category .triangle1 {
+  background-image: url(src/img/mask/home.jpg);
+  background-size: 140% 140%;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 68.5%;
+  height: 79.5%;
+  -webkit-clip-path: polygon(0% 0, 0 100%, 100% 0%);
+          clip-path: polygon(0% 0, 0 100%, 100% 0%);
+  top: 0;
+  left: 0;
+}
+.main .category .triangle1:hover {
+  background-size: 150% 150%;
+}
+.main .category .triangle2 {
+  background-image: url(src/img/mask/hotel.jpg);
+  background-size: 120% 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 57.8%;
+  height: 100%;
+  -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 30.5%);
+          clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 30.5%);
+  top: 0;
+  right: 0;
+}
+.main .category .triangle2:hover {
+  background-size: 130% 130%;
+}
+.main .category .triangle3 {
+  background-image: url(src/img/mask/office.jpg);
+  background-size: 100% 160%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 69.5%;
+  -webkit-clip-path: polygon(0 69.5%, 42.2% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 69.5%, 42.2% 0%, 100% 100%, 0% 100%);
+  bottom: 0;
+  left: 0;
+}
+.main .category .triangle3:hover {
+  background-size: 120% 180%;
+}
+.main .category .line {
+  z-index: 3;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 68.5%;
+  height: 79.5%;
+  -webkit-clip-path: polygon(0 99%, 99.5% 0, 100% 0, 0 99.5%);
+          clip-path: polygon(0 99%, 99.5% 0, 100% 0, 0 99.5%);
+}
+.main .category .line2 {
+  z-index: 3;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  width: 58%;
+  height: 100%;
+  -webkit-clip-path: polygon(0.4% 30%, 100% 99.6%, 100% 100%, 0% 30.2%);
+          clip-path: polygon(0.4% 30%, 100% 99.6%, 100% 100%, 0% 30.2%);
+}
+.main .category .text {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #15161D;
+  z-index: 3;
+}
+.main .category .text1 {
+  top: 15%;
+  left: 10%;
+}
+.main .category .text2 {
+  top: 25%;
+  right: 15%;
+}
+.main .category .text3 {
+  bottom: 30%;
+  left: 45%;
+}
+.main .category .text_inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  width: 22rem;
+  height: 5.4rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  /* overflow: hidden; */
+  /* transform: translateX(-100%); */
+}
+.main .category .text .text_inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #A4814E;
+  z-index: 4;
+  /* transform: translateY(-101%); */
+  /* animation: text_line 0.5s ease-in-out forwards; */
+}
+.main .category .text .text_inner::after {
+  content: "Для дома";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  padding-left: 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* transform: translateX(-100%);
+  animation: text_text 0.5s ease-in-out forwards;
+  animation-delay: 0.6s; */
+}
+.main .category .text2 .text_inner::after {
+  content: "Для гостиниц и санаториев";
+}
+.main .category .text2 .text_inner {
+  width: 44rem;
+}
+.main .category .text3 .text_inner::after {
+  content: "Для офиса";
+}

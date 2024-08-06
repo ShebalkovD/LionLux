@@ -1,0 +1,332 @@
+@import "reset.scss";
+@import "globals.scss";
+
+.header {
+    position: relative;
+    
+    .nav {
+        width: 100%;
+        background-color: transparent;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 100;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 6rem;
+        }
+
+        &_logo {
+            width: 2.8rem;
+            height: 2.8rem;
+            opacity: 0.8;
+            
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &_list {
+            &-item {
+                opacity: 0.8;
+                margin: 0 1.2rem;
+                transition: opacity 0.2s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &_contacts {
+            opacity: 0.8;
+            margin: 0 1.2rem;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.main {
+
+    .first {
+        padding-top: 6rem;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(179.11deg, #1F233F -33.3%, #15161D 65.85%);
+        
+
+
+        &_logo {
+            width: 91rem;
+            height: 20rem;
+
+            max-width: 90%;
+        }
+
+        &_divider {
+            width: 60rem;
+            height: 2px;
+            background-color: $accent;
+            margin-top: 6.4rem;
+        }
+
+        &_subtitle {
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-top: 1.2rem;
+        }
+
+        .btn {
+            margin-top: 6.4rem;
+            animation: first_btn 2.5s ease-in-out infinite;
+        }
+
+        @keyframes first_btn {
+            0% {
+                transform: translateY(0.5rem);
+            }
+
+            50% {
+                transform: translateY(-0.5rem);
+            }
+
+            100% {
+                transform: translateY(0.5rem);
+            }
+        }
+    }
+
+    .category {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        &_divider {
+            background: #15161D;
+            width: 100%;
+            height: 10rem;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            z-index: 5;
+
+            clip-path: polygon(0 0, 100% 100%, 100% 0);
+        }
+
+        &_triangle {
+            display: block;
+            text-decoration: none;
+            
+            position: absolute;
+            z-index: 2;
+
+            transition: background-size 0.3s ease-in-out;
+        }
+
+        .triangle1 {
+            background-image: url(src/img/mask/home.jpg);
+            background-size: 140% 140%;
+            background-position: right;
+            background-repeat: no-repeat;
+            
+            width: 68.5%;
+            height: 79.5%;
+            clip-path: polygon(0% 0, 0 100%, 100% 0%);
+
+            top: 0;
+            left: 0;
+
+            &:hover {
+                background-size: 150% 150%;
+            }
+        }
+
+        .triangle2 {
+            background-image: url(src/img/mask/hotel.jpg);
+            background-size: 120% 120%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            width: 57.8%;
+            height: 100%;
+
+            clip-path: polygon(45% 0, 100% 0, 100% 100%,0 30.5%);
+
+            top: 0;
+            right: 0;
+
+            &:hover {
+                background-size: 130% 130%;
+            }
+        }
+
+        .triangle3 {
+            background-image: url(src/img/mask/office.jpg);
+            background-size: 100% 160%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            width: 100%;
+            height: 69.5%;
+
+            clip-path: polygon(0 69.5%, 42.2% 0%, 100% 100%, 0% 100%);
+
+            bottom: 0;
+            left: 0;
+
+            &:hover {
+                background-size: 120% 180%;
+            }
+        }
+
+        .line {
+            z-index: 3;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        
+            width: 68.5%;
+            height: 79.5%;
+        
+            clip-path: polygon(0 99%, 99.5% 0, 100% 0, 0 99.5%);
+        
+        }
+        .line2 {
+            z-index: 3;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+        
+            width: 58%;
+            height: 100%;
+        
+            clip-path: polygon(0.4% 30%, 100% 99.6%, 100% 100%, 0% 30.2%);
+        
+        }
+
+        .text{
+            position: absolute;
+           
+            width: fit-content;
+            height: fit-content;
+            color: #15161D;
+        
+            z-index: 3;
+        }
+        
+        .text1 {
+            top: 15%;
+            left: 10%;
+        }
+        .text2 {
+            top: 25%;
+            right: 15%;
+        }
+        .text3 {
+            bottom: 30%;
+            left: 45%;
+        }
+        
+        .text_inner {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background-color: transparent;
+
+            width: 22rem;
+            height: 5.4rem;
+
+            font-size: 2.8rem;
+            font-weight: 600;
+            /* overflow: hidden; */
+        
+        
+            /* transform: translateX(-100%); */
+        }
+        
+        .text .text_inner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: #A4814E;
+            z-index: 4;
+        
+            /* transform: translateY(-101%); */
+            /* animation: text_line 0.5s ease-in-out forwards; */
+        }
+        .text .text_inner::after {
+            content: "Для дома";
+            display: flex;
+            align-items: center;
+            position: absolute;
+            padding-left: 32px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        
+            /* transform: translateX(-100%);
+            animation: text_text 0.5s ease-in-out forwards;
+            animation-delay: 0.6s; */
+        }
+        
+        .text2 .text_inner::after {
+            content: "Для гостиниц и санаториев";
+        }
+        
+        .text2 .text_inner {
+            width: 44rem;
+        }
+        .text3 .text_inner::after {
+            content: "Для офиса";
+        }
+
+        /* @keyframes text_line {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes text_text {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        } */
+    }
+}
