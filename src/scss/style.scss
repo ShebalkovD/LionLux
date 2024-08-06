@@ -293,7 +293,7 @@
 
             .line_inner-active {
                 &::before {
-                    animation: line2 1s ease-in-out forwards;
+                    animation: line2 1.5s ease-in-out forwards;
                     animation-delay: 0.5s;
                 }
             }
@@ -352,11 +352,11 @@
 
             background-color: transparent;
 
-            width: 22rem;
+            width: 44rem;
             height: 5.4rem;
 
-            font-size: 2.8rem;
-            font-weight: 600;
+            font-size: 2.4rem;
+            font-weight: 400;
         
         
         }
@@ -375,7 +375,7 @@
             
         }
         .text .text_inner::after {
-            content: "Для дома";
+            content: "Для домов и квартир";
             display: flex;
             align-items: center;
             position: absolute;
@@ -387,19 +387,15 @@
             background: #fff;
         
             transform: translateX(-100%);
-            // animation: text_text 0.5s ease-in-out forwards;
-            // animation-delay: 0.6s; 
         }
         
         .text2 .text_inner::after {
             content: "Для гостиниц и санаториев";
         }
         
-        .text2 .text_inner {
-            width: 44rem;
-        }
+
         .text3 .text_inner::after {
-            content: "Для офиса";
+            content: "Для офиса и производства";
         }
 
         @keyframes text_line {
@@ -423,16 +419,16 @@
 
         &_animated {
             .triangle1 {
-                animation: show_triangle1 0.5s ease-in-out forwards;
-                animation-delay: 1.5s;
+                animation: show_triangle1 0.8s ease-in-out forwards;
+                animation-delay: 2s;
             }
             .triangle2 {
-                animation: show_triangle2 0.5s ease-in-out forwards;
-                animation-delay: 1.8s;
+                animation: show_triangle2 0.8s ease-in-out forwards;
+                animation-delay: 2.6s;
             }
             .triangle3 {
-                animation: show_triangle3 0.5s ease-in-out forwards;
-                animation-delay: 2.1s;
+                animation: show_triangle3 0.8s ease-in-out forwards;
+                animation-delay: 3.2s;
             }
 
             .text1 .text_inner::before{
@@ -446,20 +442,20 @@
 
             .text2 .text_inner::before{
                 animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 3.3s;
+                animation-delay: 3.1s;
             }
             .text2 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 3.9s;
+                animation-delay: 3.7s;
             }
 
             .text3 .text_inner::before{
                 animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 4.1s;
+                animation-delay: 3.7s;
             }
             .text3 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 4.7s;
+                animation-delay: 4.3s;
             }
 
 

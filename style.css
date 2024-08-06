@@ -428,8 +428,8 @@ section {
           transform: translate(100%, 100%);
 }
 .main .category .line2 .line_inner-active::before {
-  -webkit-animation: line2 1s ease-in-out forwards;
-          animation: line2 1s ease-in-out forwards;
+  -webkit-animation: line2 1.5s ease-in-out forwards;
+          animation: line2 1.5s ease-in-out forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -506,10 +506,10 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background-color: transparent;
-  width: 22rem;
+  width: 44rem;
   height: 5.4rem;
-  font-size: 2.8rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 .main .category .text .text_inner::before {
   content: "";
@@ -525,7 +525,7 @@ section {
           transform: translateY(-101%);
 }
 .main .category .text .text_inner::after {
-  content: "Для дома";
+  content: "Для домов и квартир";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,11 +546,8 @@ section {
 .main .category .text2 .text_inner::after {
   content: "Для гостиниц и санаториев";
 }
-.main .category .text2 .text_inner {
-  width: 44rem;
-}
 .main .category .text3 .text_inner::after {
-  content: "Для офиса";
+  content: "Для офиса и производства";
 }
 @-webkit-keyframes text_line {
   0% {
@@ -593,22 +590,22 @@ section {
   }
 }
 .main .category_animated .triangle1 {
-  -webkit-animation: show_triangle1 0.5s ease-in-out forwards;
-          animation: show_triangle1 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation: show_triangle1 0.8s ease-in-out forwards;
+          animation: show_triangle1 0.8s ease-in-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .main .category_animated .triangle2 {
-  -webkit-animation: show_triangle2 0.5s ease-in-out forwards;
-          animation: show_triangle2 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation: show_triangle2 0.8s ease-in-out forwards;
+          animation: show_triangle2 0.8s ease-in-out forwards;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 .main .category_animated .triangle3 {
-  -webkit-animation: show_triangle3 0.5s ease-in-out forwards;
-          animation: show_triangle3 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+  -webkit-animation: show_triangle3 0.8s ease-in-out forwards;
+          animation: show_triangle3 0.8s ease-in-out forwards;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
 }
 .main .category_animated .text1 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
@@ -625,26 +622,26 @@ section {
 .main .category_animated .text2 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
           animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.3s;
-          animation-delay: 3.3s;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 .main .category_animated .text2 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.9s;
-          animation-delay: 3.9s;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
 }
 .main .category_animated .text3 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
           animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 4.1s;
-          animation-delay: 4.1s;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
 }
 .main .category_animated .text3 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 4.7s;
-          animation-delay: 4.7s;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
 }
 @-webkit-keyframes show_triangle1 {
   0% {
