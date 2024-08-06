@@ -598,14 +598,14 @@ section {
 .main .category_animated .triangle2 {
   -webkit-animation: show_triangle2 0.8s ease-in-out forwards;
           animation: show_triangle2 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 .main .category_animated .triangle3 {
   -webkit-animation: show_triangle3 0.8s ease-in-out forwards;
           animation: show_triangle3 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
 }
 .main .category_animated .text1 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
@@ -622,26 +622,26 @@ section {
 .main .category_animated .text2 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
           animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
 }
 .main .category_animated .text2 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.7s;
-          animation-delay: 3.7s;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
 }
 .main .category_animated .text3 .text_inner::before {
   -webkit-animation: text_line 0.5s ease-in-out forwards;
           animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.7s;
-          animation-delay: 3.7s;
+  -webkit-animation-delay: 4.1s;
+          animation-delay: 4.1s;
 }
 .main .category_animated .text3 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 4.3s;
-          animation-delay: 4.3s;
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s;
 }
 @-webkit-keyframes show_triangle1 {
   0% {

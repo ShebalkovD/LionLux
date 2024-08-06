@@ -424,11 +424,11 @@
             }
             .triangle2 {
                 animation: show_triangle2 0.8s ease-in-out forwards;
-                animation-delay: 2.6s;
+                animation-delay: 2.8s;
             }
             .triangle3 {
                 animation: show_triangle3 0.8s ease-in-out forwards;
-                animation-delay: 3.2s;
+                animation-delay: 3.6s;
             }
 
             .text1 .text_inner::before{
@@ -442,20 +442,20 @@
 
             .text2 .text_inner::before{
                 animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 3.1s;
+                animation-delay: 3.3s;
             }
             .text2 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 3.7s;
+                animation-delay: 3.9s;
             }
 
             .text3 .text_inner::before{
                 animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 3.7s;
+                animation-delay: 4.1s;
             }
             .text3 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 4.3s;
+                animation-delay: 4.7s;
             }
 
 
