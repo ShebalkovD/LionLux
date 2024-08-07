@@ -790,7 +790,7 @@ section {
   background-color: transparent;
   color: #A4814E;
   border: 1px solid #A4814E;
-  margin-right: 6.4rem;
+  margin-right: 4.8rem;
 }
 .main .about_text-btns .accent:hover {
   background-color: #A4814E;
@@ -799,4 +799,116 @@ section {
 .main .about_img {
   max-width: 45%;
   margin-left: 2.8rem;
+}
+.main .fasad {
+  overflow: hidden;
+}
+.main .fasad .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+.main .fasad .container::after {
+  content: "";
+  display: block;
+  width: 76rem;
+  height: 76rem;
+  opacity: 0.02;
+  background-image: url("src/img/fasad-vector.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -35%;
+  bottom: -15%;
+}
+.main .fasad_img {
+  display: block;
+  width: 55rem;
+}
+.main .fasad_wrapper {
+  padding-top: 10rem;
+  margin-left: 2rem;
+}
+.main .fasad_wrapper-title {
+  font-size: 4.2rem;
+  color: #A4814E;
+  font-weight: 700;
+  padding-left: 5rem;
+}
+.main .fasad_wrapper-text {
+  font-size: 2rem;
+  padding-left: 5rem;
+  color: #fff;
+  max-width: 68rem;
+  margin-top: 3.6rem;
+}
+.main .fasad_wrapper-text a {
+  color: #A4814E;
+}
+.main .fasad_wrapper-text a:hover {
+  text-decoration: underline;
+}
+.main .fasad_wrapper-btns {
+  padding-left: 5rem;
+  margin-top: 7.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .fasad_wrapper-btns .accent {
+  margin-left: 4.8rem;
+  background-color: transparent;
+  border: 1px solid #A4814E;
+  color: #A4814E;
+  position: relative;
+  width: 26rem;
+}
+.main .fasad_wrapper-btns .accent:hover {
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
+  background-color: #A4814E;
+  color: #fff;
+}
+.main .fasad_wrapper-btns .accent:hover::before {
+  background-image: url("src/img/btn-arrow-white.svg");
+}
+.main .fasad_wrapper-btns .accent::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1.2rem;
+  background-image: url("src/img/btn-arrow.svg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  right: 2rem;
+  top: 2.4rem;
+}
+.main .fasad_wrapper-btns .accent::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 2.4rem;
+  background-image: url("src/img/sidak_logo.svg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  right: -1rem;
+  top: -1.4rem;
+}
+.main .fasad_wrapper-img {
+  max-width: 85rem;
+  margin-top: 10rem;
 }

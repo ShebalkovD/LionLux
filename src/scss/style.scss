@@ -565,7 +565,7 @@
                     color: $accent;
                     border: 1px solid $accent;
 
-                    margin-right: 6.4rem;
+                    margin-right: 4.8rem;
 
                     &:hover {
                         background-color: $accent;
@@ -578,6 +578,124 @@
         &_img {
             max-width: 45%;
             margin-left: 2.8rem;
+        }
+    }
+    .fasad {
+        overflow: hidden;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+
+                width: 76rem;
+                height: 76rem;
+                opacity: 0.02;
+
+                background-image: url("src/img/fasad-vector.svg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                position: absolute;
+                right: -35%;
+                bottom: -15%;
+            }
+        }
+        &_img {
+            display: block;
+            width: 55rem;
+        }
+
+        &_wrapper {
+            padding-top: 10rem;
+            margin-left: 2rem;
+
+            &-title {
+                font-size: $title;
+                color: $accent;
+                font-weight: 700;
+                padding-left: 5rem;
+            }
+
+            &-text {
+                font-size: $text;
+                padding-left: 5rem;
+                color: #fff;
+                max-width: 68rem;
+                margin-top: 3.6rem;
+
+                a {
+                    color: $accent;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-btns {
+                padding-left: 5rem;
+                margin-top: 7.2rem;
+                display: flex;
+                align-items: center;
+
+                .accent {
+                    margin-left: 4.8rem;
+                    background-color: transparent;
+                    border: 1px solid $accent;
+                    color: $accent;
+                    position: relative;
+
+                    width: 26rem;
+
+                    &:hover {
+                        transform: translateX(1rem);
+                        background-color: $accent;
+                        color: #fff;
+
+                        &::before {
+                            background-image: url("src/img/btn-arrow-white.svg");
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 2rem;
+                        height: 1.2rem;
+                        background-image: url("src/img/btn-arrow.svg");
+                        background-size: cover;
+                        background-position: center;
+                        position: absolute;
+                        right: 2rem;
+                        top: 2.4rem;
+
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 5rem;
+                        height: 2.4rem;
+                        background-image: url("src/img/sidak_logo.svg");
+                        background-size: cover;
+                        background-position: center;
+                        position: absolute;
+                        right: -1rem;
+                        top: -1.4rem;
+                    }
+                }
+
+            }
+
+            &-img {
+                max-width: 85rem;
+                margin-top: 10rem;
+            }
         }
     }
 }
