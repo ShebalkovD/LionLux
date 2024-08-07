@@ -307,6 +307,17 @@ section {
   -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
           clip-path: polygon(0 0, 100% 100%, 100% 0);
 }
+.main .category_divider-bottom {
+  background: #15161D;
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+}
 .main .category_triangle {
   display: block;
   text-decoration: none;
@@ -714,4 +725,78 @@ section {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+.main .about {
+  margin-top: 8rem;
+  overflow: hidden;
+}
+.main .about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .about_text {
+  max-width: 72rem;
+  position: relative;
+}
+.main .about_text::before {
+  content: "LIONLUX";
+  font-size: 15rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1rem;
+  opacity: 0.02;
+  position: absolute;
+  top: -8.5rem;
+  left: -6rem;
+}
+.main .about_text-heading {
+  color: #fff;
+  font-size: 4.2rem;
+  line-height: 4.8rem;
+  font-weight: 400;
+  margin-bottom: 7.2rem;
+}
+.main .about_text-heading .accent {
+  color: #A4814E;
+  font-weight: 700;
+}
+.main .about_text-info {
+  max-width: 64rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 3.6rem;
+}
+.main .about_text-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7.2rem;
+}
+.main .about_text-btns .accent {
+  background-color: transparent;
+  color: #A4814E;
+  border: 1px solid #A4814E;
+  margin-right: 6.4rem;
+}
+.main .about_text-btns .accent:hover {
+  background-color: #A4814E;
+  color: #fff;
+}
+.main .about_img {
+  max-width: 45%;
+  margin-left: 2.8rem;
 }

@@ -6,7 +6,7 @@ let section_category = document.querySelector('.category')
 let options2 = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.1,
 };
 
 function start_animation(entries, observer) {
