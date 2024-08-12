@@ -1,6 +1,6 @@
 @import "reset.scss";
 @import "globals.scss";
-
+    
 .header {
     position: relative;
     
@@ -42,6 +42,8 @@
 
         &_list {
             &-item {
+                font-size: 1.8rem;
+                font-weight: 400;
                 opacity: 0.8;
                 margin: 0 1.2rem;
                 transition: opacity 0.2s ease-in-out;
@@ -53,6 +55,13 @@
         }
 
         &_contacts {
+            background-color: #fff;
+            color: $section_bg;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
             opacity: 0.8;
             margin: 0 1.2rem;
             transition: opacity 0.2s ease-in-out;
@@ -111,7 +120,7 @@
         }
 
         .btn {
-            margin-top: 6.4rem;
+            margin-top: 7.2rem;
             animation: first_btn 2.5s ease-in-out infinite;
         }
 
@@ -173,6 +182,8 @@
             
             position: absolute;
             z-index: 2;
+
+            will-change: background-size;
 
             transition: background-size 0.3s ease-in-out;
         }
@@ -699,6 +710,7 @@
     }
 
     .partners {
+        padding-bottom: 0;
         background: radial-gradient(74.09% 84.41% at 110.78% 105.7%, #1F233F 0%, #15161D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
         .section_title {
@@ -814,7 +826,7 @@
         &_link {
             font-size: 1.8rem;
             font-weight: 400;
-            background: radial-gradient(102.11% 541.43% at 21.38% 50%, rgba(48, 54, 111, 0.1) 0%, rgba(14, 19, 57, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            background: radial-gradient(102.11% 541.43% at 21.38% 50%, rgba(207, 211, 254, 0.1) 0%, rgba(14, 19, 57, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
             box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
             backdrop-filter: blur(23.5px);
 
@@ -830,4 +842,137 @@
             }
         }
     }
+
+    .design {
+        overflow: hidden;
+        background: radial-gradient(19.61% 45.54% at 73.88% 48.8%, #303660 0%, #15161D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &_wrapper {
+
+            max-width: 72rem;
+
+            .section_title {
+                margin-bottom: 7.2rem;
+                .accent {
+                    color: $accent;
+                }
+            }
+
+            &-title {
+                font-size: 2.4rem;
+                font-weight: 700;
+                text-align: left;
+
+                margin-bottom: 3.6rem;
+            }
+
+            &-list {
+                margin-bottom: 7.2rem;
+                li {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    margin-bottom: 1.2rem;
+                }
+            }
+
+            .btn {
+                background-color: $accent;
+                color: #fff;
+            }
+        }
+
+        &_image {
+            position: relative;
+
+            .rastr {
+                position: relative;
+                z-index: 4;
+            }
+            .vector {
+                position: absolute;
+                top: -10%;
+                right: -10%;
+                z-index: 3;
+            }
+        }
+    }
+
+    .contacts {
+
+        &_wrapper {
+
+            &-info {
+                background-color: #fff;
+                color: $section_bg;
+                width: 54rem;
+                min-height: 63rem;
+                padding-left: 8rem;
+                padding-top: 6.4rem;
+                padding-bottom: 20rem;
+
+                h3 {
+                    width: fit-content;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    border-bottom: 2px solid $accent;
+                    margin-bottom: 3.6rem;
+                }
+            }
+        }
+
+        &_list {
+            margin-bottom: 5.4rem;
+            &-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.6rem;
+
+                img {
+                    margin-right: 1.6rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                .phone {
+                    width: 1.8rem;
+                    height: 2rem;
+                }
+
+                a:hover {
+                    color: $accent;
+                    text-decoration: underline;
+                }
+
+                &.location {
+                    align-items: start;
+
+                    img {
+                        transform: translateY(0.4rem);
+                    }
+                }
+            }
+        }
+
+        &_socials {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: block;
+                margin-right: 1.6rem;
+                transition: transform ease-in-out 0.2s;
+                &:hover {
+                    transform: translateY(-0.5rem);
+                }
+            }
+        }
+    }
 }
+
