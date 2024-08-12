@@ -9,8 +9,10 @@ $shadow: 2px 4px 22px rgba(0, 0, 0, 0.1);
 
 // Текст
 $title: 4.2rem;
+$title_lh: 4.8rem;
 $subtitle: 2.8rem;
 $text: 2rem;
+$text_lh: 2.8rem;
 
 
 
@@ -26,7 +28,8 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: $text;
+    line-height: $text_lh;
     color: #fff;
     background-color: $section_bg;
 }
@@ -42,7 +45,13 @@ a {
 }
 
 section {
-    padding: 8rem 0;
+    padding: 20rem 0;
+}
+
+.section_title {
+    font-size: $title;
+    line-height: $title_lh;
+    color: #fff;
 }
 
 .btn {

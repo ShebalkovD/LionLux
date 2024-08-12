@@ -111,7 +111,8 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
   color: #fff;
   background-color: #15161D;
 }
@@ -127,7 +128,13 @@ a {
 }
 
 section {
-  padding: 8rem 0;
+  padding: 20rem 0;
+}
+
+.section_title {
+  font-size: 4.2rem;
+  line-height: 4.8rem;
+  color: #fff;
 }
 
 .btn {
@@ -224,7 +231,6 @@ section {
 }
 
 .main .first {
-  padding-top: 6rem;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,7 +759,7 @@ section {
   letter-spacing: -1rem;
   opacity: 0.02;
   position: absolute;
-  top: -8.5rem;
+  top: -3.5rem;
   left: -6rem;
 }
 .main .about_text-heading {
@@ -771,7 +777,6 @@ section {
   max-width: 64rem;
   font-size: 2rem;
   font-weight: 400;
-  line-height: 2.8rem;
   margin-bottom: 3.6rem;
 }
 .main .about_text-btns {
@@ -797,7 +802,7 @@ section {
   color: #fff;
 }
 .main .about_img {
-  max-width: 45%;
+  max-width: 40%;
   margin-left: 2.8rem;
 }
 .main .fasad {
@@ -911,4 +916,138 @@ section {
 .main .fasad_wrapper-img {
   max-width: 85rem;
   margin-top: 10rem;
+}
+.main .partners {
+  background: radial-gradient(74.09% 84.41% at 110.78% 105.7%, #1F233F 0%, #15161D 100%);
+}
+.main .partners .section_title {
+  margin-bottom: 14rem;
+  text-align: center;
+}
+.main .partners .section_title .accent {
+  color: #A4814E;
+}
+.main .partners_wrapper {
+  width: 100%;
+}
+.main .partners_wrapper-title {
+  margin-bottom: 3.6rem;
+  background: transparent;
+  color: #15161D;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #15161D;
+  overflow: hidden;
+}
+.main .partners_wrapper-title div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  width: 36rem;
+  height: 5.4rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.main .partners_wrapper-title div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #A4814E;
+  z-index: 4;
+}
+.main .partners_wrapper-title div::after {
+  content: "Плиточные материалы";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  padding-left: 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.main .partners_wrapper-title div.second::after {
+  content: "Фурнитура";
+}
+.main .partners_wrapper-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  width: 40rem;
+  height: 20rem;
+  margin: 3.6rem 2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.main .partners_wrapper-card:hover {
+  background-color: rgba(255, 255, 255, 0.2117647059);
+  -webkit-transform: translateY(-2rem);
+      -ms-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+}
+.main .partners_wrapper-card img {
+  max-width: 100%;
+  width: 35rem;
+}
+.main .partners_wrapper-inner {
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 7rem;
+}
+.main .partners_link {
+  font-size: 1.8rem;
+  font-weight: 400;
+  background: radial-gradient(102.11% 541.43% at 21.38% 50%, rgba(48, 54, 111, 0.1) 0%, rgba(14, 19, 57, 0.1) 100%);
+  -webkit-box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
+          box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+}
+.main .partners_link .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+}
+.main .partners_link a {
+  color: #A4814E;
+  margin-left: 1rem;
 }

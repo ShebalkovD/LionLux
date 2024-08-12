@@ -79,7 +79,6 @@
 .main {
 
     .first {
-        padding-top: 6rem;
         min-height: 100vh;
 
         display: flex;
@@ -528,7 +527,7 @@
                 opacity: 0.02;
                 
                 position: absolute;
-                top: -8.5rem;
+                top: -3.5rem;
                 left: -6rem;
             }
 
@@ -550,7 +549,6 @@
                 max-width: 64rem;
                 font-size: $text;
                 font-weight: 400;
-                line-height: 2.8rem;
                 margin-bottom: 3.6rem;
             }
 
@@ -576,10 +574,11 @@
         }
 
         &_img {
-            max-width: 45%;
+            max-width: 40%;
             margin-left: 2.8rem;
         }
     }
+
     .fasad {
         overflow: hidden;
         .container {
@@ -695,6 +694,139 @@
             &-img {
                 max-width: 85rem;
                 margin-top: 10rem;
+            }
+        }
+    }
+
+    .partners {
+        background: radial-gradient(74.09% 84.41% at 110.78% 105.7%, #1F233F 0%, #15161D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+        .section_title {
+            margin-bottom: 14rem;
+            text-align: center;
+            .accent {
+                color: $accent;
+            }
+        }
+
+        &_wrapper {
+            width: 100%;
+            &-title {
+                margin-bottom: 3.6rem;
+
+                background: transparent;
+                color: $section_bg;
+                width: fit-content;
+                height: fit-content;
+
+                color: #15161D;
+
+                overflow: hidden;
+
+                div {
+                    position: relative;
+
+                    display: flex;
+                    align-items: center;
+        
+                    background-color: transparent;
+        
+                    width: 36rem;
+                    height: 5.4rem;
+        
+                    font-size: 2.4rem;
+                    font-weight: 400;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 6px;
+                        height: 100%;
+                        background: #A4814E;
+                        z-index: 4;
+                    
+                        // transform: translateY(-101%);
+                    }
+
+                    &::after {
+                        content: "Плиточные материалы";
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        padding-left: 32px;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                    
+                        // transform: translateX(-100%);
+                    }
+
+                    &.second{
+                        &::after {
+                            content: "Фурнитура";
+                        }
+                    }
+                }
+            }
+
+           
+            &-card {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: transparent;
+                width: 40rem;
+                height: 20rem;
+
+                margin: 3.6rem 2rem;
+
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #ffffff36;
+                    transform: translateY(-2rem);
+                }
+                img {
+                    max-width: 100%;
+                    width: 35rem;
+                }
+                    
+            }
+
+            &-inner {
+                min-height: 40vh;
+
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                flex-wrap: wrap;
+                margin-bottom: 7rem;
+            }
+        }
+
+        &_link {
+            font-size: 1.8rem;
+            font-weight: 400;
+            background: radial-gradient(102.11% 541.43% at 21.38% 50%, rgba(48, 54, 111, 0.1) 0%, rgba(14, 19, 57, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
+            backdrop-filter: blur(23.5px);
+
+            .container {
+                display: flex;
+                align-items: center;
+                height: 10rem;
+            }
+
+            a {
+                color: $accent;
+                margin-left: 1rem;
             }
         }
     }
