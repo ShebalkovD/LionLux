@@ -183,9 +183,20 @@
             position: absolute;
             z-index: 2;
 
-            will-change: background-size;
+            transition: opacity 0.3s ease-in-out;
 
-            transition: background-size 0.3s ease-in-out;
+            &-wrapper {
+                height: 100%;
+                width: 100%;
+                background-color: #15161D;
+                opacity: 0.6;
+
+                transition: opacity 0.1s ease-in-out;
+            }
+
+            &:hover .category_triangle-wrapper{
+                opacity: 0.3;
+            }
         }
 
         .triangle1 {
@@ -203,9 +214,7 @@
 
             transform: translateX(-3rem);
 
-            &:hover {
-                background-size: 150% 150%;
-            }
+            
         }
 
         .triangle2 {
@@ -224,9 +233,7 @@
 
             transform: translateX(2.5rem);
 
-            &:hover {
-                background-size: 130% 130%;
-            }
+            
         }
 
         .triangle3 {
@@ -245,9 +252,7 @@
 
             transform: translateY(2rem);
 
-            &:hover {
-                background-size: 120% 180%;
-            }
+            
         }
 
         .line {
@@ -281,11 +286,12 @@
 
             .line_inner-active {
                 &::before {
-                    animation: line1 1s ease-in-out forwards;
+                    animation: line1 0.8s ease-in-out forwards;
                 }
             }
         
         }
+
         .line2 {
             z-index: 3;
             display: block;
@@ -317,7 +323,7 @@
 
             .line_inner-active {
                 &::before {
-                    animation: line2 1.5s ease-in-out forwards;
+                    animation: line2 1.2s ease-in-out forwards;
                     animation-delay: 0.5s;
                 }
             }
@@ -359,10 +365,12 @@
             top: 15%;
             left: 10%;
         }
+
         .text2 {
             top: 25%;
             right: 15%;
         }
+
         .text3 {
             bottom: 30%;
             left: 45%;
@@ -398,6 +406,7 @@
             transform: translateY(-101%);
             
         }
+
         .text .text_inner::after {
             content: "Для домов и квартир";
             display: flex;
@@ -417,7 +426,6 @@
             content: "Для гостиниц и санаториев";
         }
         
-
         .text3 .text_inner::after {
             content: "Для офиса и производства";
         }
@@ -431,6 +439,7 @@
                 transform: translateY(0);
             }
         }
+
         @keyframes text_text {
             0% {
                 transform: translateX(-100%);
@@ -443,43 +452,43 @@
 
         &_animated {
             .triangle1 {
-                animation: show_triangle1 0.8s ease-in-out forwards;
-                animation-delay: 2s;
+                animation: show_triangle1 0.5s ease-in-out forwards;
+                animation-delay: 1.5s;
             }
             .triangle2 {
-                animation: show_triangle2 0.8s ease-in-out forwards;
-                animation-delay: 2.8s;
+                animation: show_triangle2 0.5s ease-in-out forwards;
+                animation-delay: 2.3s;
             }
             .triangle3 {
-                animation: show_triangle3 0.8s ease-in-out forwards;
-                animation-delay: 3.6s;
+                animation: show_triangle3 0.5s ease-in-out forwards;
+                animation-delay: 3.1s;
             }
 
             .text1 .text_inner::before{
-                animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 2.5s;
+                animation: text_line 0.3s ease-in-out forwards;
+                animation-delay: 2s;
             }
             .text1 .text_inner::after{
+                animation: text_text 0.5s ease-in-out forwards;
+                animation-delay: 2.3s;
+            }
+
+            .text2 .text_inner::before{
+                animation: text_line 0.3s ease-in-out forwards;
+                animation-delay: 2.8s;
+            }
+            .text2 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
                 animation-delay: 3.1s;
             }
 
-            .text2 .text_inner::before{
-                animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 3.3s;
-            }
-            .text2 .text_inner::after{
-                animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 3.9s;
-            }
-
             .text3 .text_inner::before{
-                animation: text_line 0.5s ease-in-out forwards;
-                animation-delay: 4.1s;
+                animation: text_line 0.3s ease-in-out forwards;
+                animation-delay: 3.6s;
             }
             .text3 .text_inner::after{
                 animation: text_text 0.5s ease-in-out forwards;
-                animation-delay: 4.7s;
+                animation-delay: 3.9s;
             }
 
 
@@ -489,7 +498,7 @@
                     transform: translateX(-3rem);
                 }
                 100% {
-                    opacity: 1;
+                    opacity: 0.8;
                     transform: translateX(0);
                 }
             }
@@ -499,7 +508,7 @@
                     transform: translateX(2.5rem);
                 }
                 100% {
-                    opacity: 1;
+                    opacity: 0.8;
                     transform: translateX(0);
                 }
             }
@@ -509,7 +518,7 @@
                     transform: translateY(3rem);
                 }
                 100% {
-                    opacity: 1;
+                    opacity: 0.8;
                     transform: translateY(0);
                 }
             }
@@ -839,13 +848,17 @@
             a {
                 color: $accent;
                 margin-left: 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
 
     .design {
         overflow: hidden;
-        background: radial-gradient(19.61% 45.54% at 73.88% 48.8%, #303660 0%, #15161D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        background: radial-gradient(18.62% 37.15% at 75.39% 50.05%, #1F233F 0%, #15161D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
 
         .container {
@@ -905,34 +918,69 @@
     }
 
     .contacts {
+        overflow: hidden;
+
+        .section_title {
+            text-align: right;
+            margin-bottom: 7.2rem;
+        }
 
         &_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &-info {
+                position: relative;
+
                 background-color: #fff;
                 color: $section_bg;
-                width: 54rem;
+
+                width: 42rem;
                 min-height: 63rem;
-                padding-left: 8rem;
-                padding-top: 6.4rem;
-                padding-bottom: 20rem;
+
+                padding-left: 4rem;
+                padding-top: 3.2rem;
+                padding-bottom: 10rem;
 
                 h3 {
                     width: fit-content;
-                    font-size: 2.4rem;
+                    font-size: 2rem;
                     font-weight: 700;
                     border-bottom: 2px solid $accent;
-                    margin-bottom: 3.6rem;
+                    margin-bottom: 3.2rem;
                 }
+
+                .btn {
+                    position: absolute;
+                    bottom: 4rem;
+                    right: -5rem;
+
+                    background-color: $accent;
+                    color: #fff;
+
+                    &:hover {
+                        transform: translateX(1rem);
+                    }
+                }
+            }
+
+            &-img {
+                max-width: 70%;
+                transform: translateX(10%);
             }
         }
 
         &_list {
-            margin-bottom: 5.4rem;
+            margin-bottom: 4.2rem;
+
             &-item {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1.6rem;
+
+                font-size: 1.8rem;
+                font-weight: 400;
 
                 img {
                     margin-right: 1.6rem;
@@ -968,9 +1016,126 @@
                 display: block;
                 margin-right: 1.6rem;
                 transition: transform ease-in-out 0.2s;
+                
                 &:hover {
                     transform: translateY(-0.5rem);
                 }
+            }
+        }
+    }
+
+    .service {
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &_wrapper {
+            max-width: 54rem;
+            .section_title {
+                text-align: left;
+                margin-bottom: 12rem;
+            }
+
+            &-text {
+                color: #fff;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                font-weight: 400;
+                text-align: left;
+
+                margin-bottom: 3.6rem;
+
+                .accent {
+                    color: $accent;
+                }
+            }
+        }
+
+        &_btns {
+            background-color: $accent;
+
+            width: fit-content;
+            height: fit-content;
+
+            padding: 0;
+            margin: 0;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                border: none;
+                outline: none;
+
+                width: 40rem;
+                height: 20rem;
+
+                margin: 0;
+                padding: 1.6rem;
+
+                background-color: #fff;
+
+                transition: transform 0.2s ease-in-out;
+
+                &:hover {
+                    transform: translateX(-2rem);
+                }
+
+                img {
+                    display: block;
+                    margin-bottom: 2.4rem;
+                }
+
+                p {
+                    font-size: 2.4rem;
+                    line-height: 2.4rem;
+                    letter-spacing: 0.2rem;
+                    font-weight: 700;
+                    text-align: left;
+                }
+
+                &:nth-child(1) {
+
+                    img {
+                        height: 2.8rem;
+                        width: 3.2rem;
+                    }
+
+                    p {
+                        color: $section_bg;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: $section_bg;
+
+                    img {
+                        height: 3.2rem;
+                        width: 3.2rem;
+                    }
+
+                    p {
+                        color: #fff;
+                    }
+                }
+                &:nth-child(1) {
+                    background-color: #fff;
+
+                    img {
+                        height: 4.4rem;
+                        width: 3.2rem;
+                    }
+
+                    p {
+                        color: $section_bg;
+                    }
+                }
+
+
             }
         }
     }

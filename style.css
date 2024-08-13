@@ -347,9 +347,19 @@ section {
   pointer-events: none;
   position: absolute;
   z-index: 2;
-  will-change: background-size;
-  -webkit-transition: background-size 0.3s ease-in-out;
-  transition: background-size 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.main .category_triangle-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #15161D;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.main .category_triangle:hover .category_triangle-wrapper {
+  opacity: 0.3;
 }
 .main .category .triangle1 {
   background-image: url(src/img/mask/home.jpg);
@@ -366,9 +376,6 @@ section {
       -ms-transform: translateX(-3rem);
           transform: translateX(-3rem);
 }
-.main .category .triangle1:hover {
-  background-size: 150% 150%;
-}
 .main .category .triangle2 {
   background-image: url(src/img/mask/hotel.jpg);
   background-size: 120% 120%;
@@ -384,9 +391,6 @@ section {
       -ms-transform: translateX(2.5rem);
           transform: translateX(2.5rem);
 }
-.main .category .triangle2:hover {
-  background-size: 130% 130%;
-}
 .main .category .triangle3 {
   background-image: url(src/img/mask/office.jpg);
   background-size: 100% 160%;
@@ -401,9 +405,6 @@ section {
   -webkit-transform: translateY(2rem);
       -ms-transform: translateY(2rem);
           transform: translateY(2rem);
-}
-.main .category .triangle3:hover {
-  background-size: 120% 180%;
 }
 .main .category .line {
   z-index: 3;
@@ -432,8 +433,8 @@ section {
           transform: translate(-100%, 100%);
 }
 .main .category .line .line_inner-active::before {
-  -webkit-animation: line1 1s ease-in-out forwards;
-          animation: line1 1s ease-in-out forwards;
+  -webkit-animation: line1 0.8s ease-in-out forwards;
+          animation: line1 0.8s ease-in-out forwards;
 }
 .main .category .line2 {
   z-index: 3;
@@ -462,8 +463,8 @@ section {
           transform: translate(100%, 100%);
 }
 .main .category .line2 .line_inner-active::before {
-  -webkit-animation: line2 1.5s ease-in-out forwards;
-          animation: line2 1.5s ease-in-out forwards;
+  -webkit-animation: line2 1.2s ease-in-out forwards;
+          animation: line2 1.2s ease-in-out forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -624,58 +625,58 @@ section {
   }
 }
 .main .category_animated .triangle1 {
-  -webkit-animation: show_triangle1 0.8s ease-in-out forwards;
-          animation: show_triangle1 0.8s ease-in-out forwards;
+  -webkit-animation: show_triangle1 0.5s ease-in-out forwards;
+          animation: show_triangle1 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.main .category_animated .triangle2 {
+  -webkit-animation: show_triangle2 0.5s ease-in-out forwards;
+          animation: show_triangle2 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.main .category_animated .triangle3 {
+  -webkit-animation: show_triangle3 0.5s ease-in-out forwards;
+          animation: show_triangle3 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.main .category_animated .text1 .text_inner::before {
+  -webkit-animation: text_line 0.3s ease-in-out forwards;
+          animation: text_line 0.3s ease-in-out forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-.main .category_animated .triangle2 {
-  -webkit-animation: show_triangle2 0.8s ease-in-out forwards;
-          animation: show_triangle2 0.8s ease-in-out forwards;
+.main .category_animated .text1 .text_inner::after {
+  -webkit-animation: text_text 0.5s ease-in-out forwards;
+          animation: text_text 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.main .category_animated .text2 .text_inner::before {
+  -webkit-animation: text_line 0.3s ease-in-out forwards;
+          animation: text_line 0.3s ease-in-out forwards;
   -webkit-animation-delay: 2.8s;
           animation-delay: 2.8s;
 }
-.main .category_animated .triangle3 {
-  -webkit-animation: show_triangle3 0.8s ease-in-out forwards;
-          animation: show_triangle3 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
-}
-.main .category_animated .text1 .text_inner::before {
-  -webkit-animation: text_line 0.5s ease-in-out forwards;
-          animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-.main .category_animated .text1 .text_inner::after {
+.main .category_animated .text2 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
   -webkit-animation-delay: 3.1s;
           animation-delay: 3.1s;
 }
-.main .category_animated .text2 .text_inner::before {
-  -webkit-animation: text_line 0.5s ease-in-out forwards;
-          animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.3s;
-          animation-delay: 3.3s;
-}
-.main .category_animated .text2 .text_inner::after {
-  -webkit-animation: text_text 0.5s ease-in-out forwards;
-          animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 3.9s;
-          animation-delay: 3.9s;
-}
 .main .category_animated .text3 .text_inner::before {
-  -webkit-animation: text_line 0.5s ease-in-out forwards;
-          animation: text_line 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 4.1s;
-          animation-delay: 4.1s;
+  -webkit-animation: text_line 0.3s ease-in-out forwards;
+          animation: text_line 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
 }
 .main .category_animated .text3 .text_inner::after {
   -webkit-animation: text_text 0.5s ease-in-out forwards;
           animation: text_text 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 4.7s;
-          animation-delay: 4.7s;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
 }
 @-webkit-keyframes show_triangle1 {
   0% {
@@ -684,7 +685,7 @@ section {
             transform: translateX(-3rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -696,7 +697,7 @@ section {
             transform: translateX(-3rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -708,7 +709,7 @@ section {
             transform: translateX(2.5rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -720,7 +721,7 @@ section {
             transform: translateX(2.5rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -732,7 +733,7 @@ section {
             transform: translateY(3rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -744,7 +745,7 @@ section {
             transform: translateY(3rem);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -1069,9 +1070,12 @@ section {
   color: #A4814E;
   margin-left: 1rem;
 }
+.main .partners_link a:hover {
+  text-decoration: underline;
+}
 .main .design {
   overflow: hidden;
-  background: radial-gradient(19.61% 45.54% at 73.88% 48.8%, #303660 0%, #15161D 100%);
+  background: radial-gradient(18.62% 37.15% at 75.39% 50.05%, #1F233F 0%, #15161D 100%);
 }
 .main .design .container {
   display: -webkit-box;
@@ -1124,26 +1128,63 @@ section {
   right: -10%;
   z-index: 3;
 }
+.main .contacts {
+  overflow: hidden;
+}
+.main .contacts .section_title {
+  text-align: right;
+  margin-bottom: 7.2rem;
+}
+.main .contacts_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .main .contacts_wrapper-info {
+  position: relative;
   background-color: #fff;
   color: #15161D;
-  width: 54rem;
+  width: 42rem;
   min-height: 63rem;
-  padding-left: 8rem;
-  padding-top: 6.4rem;
-  padding-bottom: 20rem;
+  padding-left: 4rem;
+  padding-top: 3.2rem;
+  padding-bottom: 10rem;
 }
 .main .contacts_wrapper-info h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   border-bottom: 2px solid #A4814E;
-  margin-bottom: 3.6rem;
+  margin-bottom: 3.2rem;
+}
+.main .contacts_wrapper-info .btn {
+  position: absolute;
+  bottom: 4rem;
+  right: -5rem;
+  background-color: #A4814E;
+  color: #fff;
+}
+.main .contacts_wrapper-info .btn:hover {
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+.main .contacts_wrapper-img {
+  max-width: 70%;
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
 }
 .main .contacts_list {
-  margin-bottom: 5.4rem;
+  margin-bottom: 4.2rem;
 }
 .main .contacts_list-item {
   display: -webkit-box;
@@ -1153,6 +1194,8 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 .main .contacts_list-item img {
   margin-right: 1.6rem;
@@ -1197,4 +1240,110 @@ section {
   -webkit-transform: translateY(-0.5rem);
       -ms-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
+}
+.main .service .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .service_wrapper {
+  max-width: 54rem;
+}
+.main .service_wrapper .section_title {
+  text-align: left;
+  margin-bottom: 12rem;
+}
+.main .service_wrapper-text {
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 3.6rem;
+}
+.main .service_wrapper-text .accent {
+  color: #A4814E;
+}
+.main .service_btns {
+  background-color: #A4814E;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.main .service_btns-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  border: none;
+  outline: none;
+  width: 40rem;
+  height: 20rem;
+  margin: 0;
+  padding: 1.6rem;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.main .service_btns-item:hover {
+  -webkit-transform: translateX(-2rem);
+      -ms-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+}
+.main .service_btns-item img {
+  display: block;
+  margin-bottom: 2.4rem;
+}
+.main .service_btns-item p {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+.main .service_btns-item:nth-child(1) img {
+  height: 2.8rem;
+  width: 3.2rem;
+}
+.main .service_btns-item:nth-child(1) p {
+  color: #15161D;
+}
+.main .service_btns-item:nth-child(2) {
+  background-color: #15161D;
+}
+.main .service_btns-item:nth-child(2) img {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+.main .service_btns-item:nth-child(2) p {
+  color: #fff;
+}
+.main .service_btns-item:nth-child(1) {
+  background-color: #fff;
+}
+.main .service_btns-item:nth-child(1) img {
+  height: 4.4rem;
+  width: 3.2rem;
+}
+.main .service_btns-item:nth-child(1) p {
+  color: #15161D;
 }

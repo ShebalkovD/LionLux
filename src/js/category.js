@@ -6,25 +6,25 @@ let section_category = document.querySelector('.category')
 let options2 = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.1,
+    threshold: 0.5,
 };
 
 function start_animation(entries, observer) {
     const [entry] = entries;
-    setTimeout(function() {
-        if (entry.isIntersecting) {
-            line1.classList.add("line_inner-active");
-            line2.classList.add("line_inner-active");
-            section_category.classList.add('category_animated')
+    
+    if (entry.isIntersecting) {
+        line1.classList.add("line_inner-active");
+        line2.classList.add("line_inner-active");
+        section_category.classList.add('category_animated')
 
-            setTimeout(function() {
-                let elements = document.querySelectorAll('.category_triangle')
-                elements.forEach(el => {
-                    el.style.pointerEvents = "auto";
-                })
-            }, 2500)
-        }
-    }, 500)
+        setTimeout(function() {
+            let elements = document.querySelectorAll('.category_triangle')
+            elements.forEach(el => {
+                el.style.pointerEvents = "auto";
+            })
+        }, 1500)
+    }
+    
 
    
     
