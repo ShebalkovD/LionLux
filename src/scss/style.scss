@@ -783,7 +783,7 @@
                     }
 
                     &::after {
-                        content: "Плиточные материалы";
+                        content: "Плитные материалы";
                         display: flex;
                         align-items: center;
                         position: absolute;
@@ -798,8 +798,9 @@
                     }
 
                     &.second{
+                        width: 54rem;
                         &::after {
-                            content: "Фурнитура";
+                            content: "Фурнитура и комплектующие";
                         }
                     }
                 }

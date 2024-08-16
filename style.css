@@ -996,7 +996,7 @@ section {
   z-index: 4;
 }
 .main .partners_wrapper-title div::after {
-  content: "Плиточные материалы";
+  content: "Плитные материалы";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1011,8 +1011,11 @@ section {
   height: 100%;
   background: #fff;
 }
+.main .partners_wrapper-title div.second {
+  width: 54rem;
+}
 .main .partners_wrapper-title div.second::after {
-  content: "Фурнитура";
+  content: "Фурнитура и комплектующие";
 }
 .main .partners_wrapper-card {
   position: relative;
