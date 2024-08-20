@@ -28,8 +28,13 @@ html {
 }
 
 body {
+    position: relative;
     font-size: $text;
     line-height: $text_lh;
+    min-height: 100vh;
+    height: fit-content;
+    padding-bottom: 35rem;
+
     color: #fff;
     background-color: $section_bg;
 

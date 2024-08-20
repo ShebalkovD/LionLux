@@ -32,8 +32,8 @@
         }
 
         &_logo {
-            width: 2.8rem;
-            height: 2.8rem;
+            width: 3.2rem;
+            height: 3.2rem;
             opacity: 0.8;
             
             transition: opacity 0.2s ease-in-out;
@@ -41,9 +41,41 @@
             &:hover {
                 opacity: 1;
             }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &_burger {
+            display: none;
+
+            width: 3.6rem;
+            opacity: 0.8;
+            
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
         }
 
         &_list {
+            &::selection {
+                background-color: transparent; 
+             }
+
+             &:hover {
+                cursor:default;
+             }
+
             &-item {
                 font-size: 1.6rem;
                 font-weight: 400;
@@ -55,6 +87,10 @@
                     opacity: 1;
                     cursor: pointer;
                 }
+
+                &::selection {
+                    background-color: transparent; 
+                 }
             }
         }
 
@@ -133,7 +169,6 @@
         &-item {
             display: block;
             width: 30rem;
-            margin-right: 2.4rem;
 
             img {
                 width: 100%;
@@ -744,6 +779,7 @@
                 position: absolute;
                 right: -35%;
                 bottom: -15%;
+                z-index: -1;
             }
         }
         &_img {
@@ -1264,12 +1300,12 @@
                         color: #fff;
                     }
                 }
-                &:nth-child(1) {
+                &:nth-child(3) {
                     background-color: #fff;
 
                     img {
                         height: 4.4rem;
-                        width: 3.2rem;
+                        width: 4.2rem;
                     }
 
                     p {
@@ -1284,6 +1320,11 @@
 }
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
     width: 100%;
     padding: 2rem 0;
     background-color: transparent;
@@ -1401,4 +1442,6 @@
 
 
 }
+
+@import "adaptive.scss";
 

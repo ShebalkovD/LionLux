@@ -111,8 +111,14 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 2rem;
   line-height: 2.8rem;
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 35rem;
   color: #fff;
   background-color: #15161D;
 }
@@ -200,14 +206,42 @@ section {
   height: 6rem;
 }
 .header .nav_logo {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
   opacity: 0.8;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 .header .nav_logo:hover {
   opacity: 1;
+}
+.header .nav_logo img {
+  display: block;
+  width: 100%;
+}
+.header .nav_burger {
+  display: none;
+  width: 3.6rem;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header .nav_burger:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.header .nav_burger img {
+  display: block;
+  width: 100%;
+}
+.header .nav_list::-moz-selection {
+  background-color: transparent;
+}
+.header .nav_list::selection {
+  background-color: transparent;
+}
+.header .nav_list:hover {
+  cursor: default;
 }
 .header .nav_list-item {
   font-size: 1.6rem;
@@ -220,6 +254,12 @@ section {
 .header .nav_list-item:hover {
   opacity: 1;
   cursor: pointer;
+}
+.header .nav_list-item::-moz-selection {
+  background-color: transparent;
+}
+.header .nav_list-item::selection {
+  background-color: transparent;
 }
 .header .nav_contacts {
   background-color: transparent;
@@ -292,7 +332,6 @@ section {
 .header_catalog-item {
   display: block;
   width: 30rem;
-  margin-right: 2.4rem;
 }
 .header_catalog-item img {
   width: 100%;
@@ -954,6 +993,7 @@ section {
   position: absolute;
   right: -35%;
   bottom: -15%;
+  z-index: -1;
 }
 .main .fasad_img {
   display: block;
@@ -1458,18 +1498,22 @@ section {
 .main .service_btns-item:nth-child(2) p {
   color: #fff;
 }
-.main .service_btns-item:nth-child(1) {
+.main .service_btns-item:nth-child(3) {
   background-color: #fff;
 }
-.main .service_btns-item:nth-child(1) img {
+.main .service_btns-item:nth-child(3) img {
   height: 4.4rem;
-  width: 3.2rem;
+  width: 4.2rem;
 }
-.main .service_btns-item:nth-child(1) p {
+.main .service_btns-item:nth-child(3) p {
   color: #15161D;
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
   padding: 2rem 0;
   background-color: transparent;
@@ -1594,4 +1638,66 @@ section {
 }
 .footer_confidence:hover {
   opacity: 1;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+  html {
+    font-size: 9px;
+  }
+  .main .fasad_img {
+    width: 40%;
+  }
+  .main .fasad_wrapper-img {
+    max-width: 100%;
+  }
+  .main .contacts_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main .contacts_wrapper-img {
+    max-width: 100%;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin-bottom: 7.2rem;
+  }
+  .main .contacts_wrapper-info {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+  .design_image {
+    width: 40%;
+  }
+  .design_image .rastr {
+    max-width: 100%;
+  }
+  .design_image .vector {
+    max-width: 120%;
+  }
+  .main .design_wrapper {
+    max-width: 42rem;
+  }
+  .nav_list {
+    display: none;
+  }
+  .nav .nav_burger {
+    display: block;
+  }
 }
