@@ -116,6 +116,9 @@ body {
   color: #fff;
   background-color: #15161D;
 }
+body.no_scroll {
+  overflow: hidden;
+}
 
 a {
   color: inherit;
@@ -166,22 +169,25 @@ section {
 }
 
 .header {
+  width: 100%;
   position: relative;
 }
 .header .nav {
   width: 100%;
   background-color: transparent;
+  height: 6rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 200;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.header .nav_active {
+.header .nav_fixed {
   background-color: #15161D;
 }
-.header .nav .container {
+.header .nav .container:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,6 +219,7 @@ section {
 }
 .header .nav_list-item:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .header .nav_contacts {
   background-color: transparent;
@@ -244,6 +251,93 @@ section {
 }
 .header .nav_contacts:hover {
   opacity: 1;
+}
+.header_catalog {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  overflow-x: auto;
+  scrollbar-width: 0px;
+  z-index: 100;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding-top: 4.8rem;
+  padding-bottom: 2.4rem;
+  background-color: #15161D;
+}
+.header_catalog .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.header_catalog-title {
+  font-size: 2.4rem;
+  color: #A4814E;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+.header_catalog-item {
+  display: block;
+  width: 30rem;
+  margin-right: 2.4rem;
+}
+.header_catalog-item img {
+  width: 100%;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header_catalog-item p {
+  font-size: 1.8rem;
+  margin-top: 0.8rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header_catalog-item p::before {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: #A4814E;
+  opacity: 0;
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  -webkit-transform: translateY(0.5rem);
+      -ms-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.header_catalog-item:hover img {
+  opacity: 1;
+}
+.header_catalog-item:hover p::before {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.header_catalog.active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
 }
 .header_observertrigger {
   width: 1rem;
@@ -980,7 +1074,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background-color: transparent;
-  width: 36rem;
+  width: 42rem;
   height: 5.4rem;
   font-size: 2.4rem;
   font-weight: 400;
@@ -1011,11 +1105,14 @@ section {
   height: 100%;
   background: #fff;
 }
-.main .partners_wrapper-title div.second {
-  width: 54rem;
-}
 .main .partners_wrapper-title div.second::after {
   content: "Фурнитура и комплектующие";
+}
+.main .partners_wrapper-title div.third {
+  width: 84rem;
+}
+.main .partners_wrapper-title div.third::after {
+  content: "Условия изготовления мебели под заказ в компании «Lion-Lux»:";
 }
 .main .partners_wrapper-card {
   position: relative;
@@ -1060,6 +1157,21 @@ section {
       flex-wrap: wrap;
   margin-bottom: 7rem;
 }
+.main .partners_wrapper-subtitle {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3.6rem;
+}
+.main .partners_wrapper-list {
+  margin-bottom: 7.2rem;
+}
+.main .partners_wrapper-list li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
 .main .partners_link {
   font-size: 1.8rem;
   font-weight: 400;
@@ -1101,6 +1213,7 @@ section {
           justify-content: space-between;
 }
 .main .design_wrapper {
+  color: #fff;
   max-width: 72rem;
 }
 .main .design_wrapper .section_title {
@@ -1109,21 +1222,17 @@ section {
 .main .design_wrapper .section_title .accent {
   color: #A4814E;
 }
-.main .design_wrapper-title {
+.main .design_wrapper-subtitle {
   font-size: 2.4rem;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom: 3.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
 }
-.main .design_wrapper-list {
-  margin-bottom: 7.2rem;
-}
-.main .design_wrapper-list li {
+.main .design_wrapper-text {
   font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 1.2rem;
 }
 .main .design_wrapper .btn {
+  margin-top: 7.2rem;
   background-color: #A4814E;
   color: #fff;
 }

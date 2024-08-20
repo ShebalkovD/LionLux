@@ -32,6 +32,10 @@ body {
     line-height: $text_lh;
     color: #fff;
     background-color: $section_bg;
+
+    &.no_scroll {
+        overflow: hidden;
+    }
 }
 
 a {

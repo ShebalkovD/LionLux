@@ -10,7 +10,7 @@
 
 <body>
     <header class="header">
-            <nav class="nav " id="nav">
+            <nav class="nav nav_active" id="nav">
                 <div class="container">
                     <a href="index.html" class="nav_logo">
                         <img src="src/img/header_logo.svg" alt="">
@@ -18,7 +18,7 @@
                         
                     <div class="nav_list">
                         <a href="#" class="nav_list-item">Главная</a>
-                        <a href="#" class="nav_list-item">Каталог</a>
+                        <span href="#" class="nav_list-item" id="nav_catalog_button">Каталог</span>
                         <a href="#" class="nav_list-item">Дизайн-проект</a>
                         <a href="#" class="nav_list-item">Фасады</a>
                         <a href="#" class="nav_list-item">Фурнитура</a>
@@ -28,7 +28,34 @@
                         
                     <a href="#" class="nav_contacts">Контакты</a>
                 </div>
+
+                
             </nav>
+
+            <div class="header_catalog" id="header_catalog">
+                <div class="container">
+
+                    
+                    <a href="#" class="header_catalog-item">
+                        <img src="src/img/header_catalog-kitchen.jpg" alt="">
+                        <p>Для домов и квартир</p>
+                    </a>
+
+                    <a href="#" class="header_catalog-item">
+                        <img src="src/img/header_catalog-kitchen.jpg" alt="">
+                        <p>Для офиса и производства</p>
+                    </a>
+
+                    <a href="#" class="header_catalog-item">
+                        <img src="src/img/header_catalog-kitchen.jpg" alt="">
+                        <p>Для гостиниц и санаториев</p>
+                    </a>
+
+
+                </div>  
+            </div>
+
+            </div>
 
              <div class="header_observertrigger"></div>
     </header>
@@ -145,11 +172,15 @@
                     </h3>
 
                     <div class="partners_wrapper-inner container">
-                        <a href="#" target="_blank" class="partners_wrapper-card">
-                            <img src="src/img/botanica.svg" alt="" class="partners_wrapper_inne-card">
+                        <a href="https://taurus-botanica.ru/catalog" target="_blank" class="partners_wrapper-card">
+                            <img src="src/img/botanica.svg" alt="" class="partners_wrapper_inne-card" style="width: 70%;">
                         </a>
                         <a href="https://www.egger-russia.ru/" target="_blank" class="partners_wrapper-card">
                             <img src="src/img/egger.svg" alt="" class="partners_wrapper_inne-card">
+                        </a>
+
+                        <a href="https://arbor-nova.ru/" target="_blank" class="partners_wrapper-card">
+                            <img src="src/img/arbor.svg" alt="" class="partners_wrapper_inne-card">
                         </a>
                     </div>
                     
@@ -164,9 +195,6 @@
                         <a href="https://www.blum.com/md/ru/" target="_blank" class="partners_wrapper-card">
                             <img src="src/img/blum.svg" alt="" class="partners_wrapper_inne-card">
                         </a>
-                        <a href="https://arbor-nova.ru/" target="_blank" class="partners_wrapper-card">
-                            <img src="src/img/arbor.svg" alt="" class="partners_wrapper_inne-card">
-                        </a>
                         <a href="https://gtv-meridian.ru/catalog/mebelnaya_furnitura/" target="_blank" class="partners_wrapper-card">
                             <img src="src/img/gtv.svg" alt="" class="partners_wrapper_inner-card">
                         </a>
@@ -176,6 +204,21 @@
                 <h2 class="section_title">
                     И ничего другого
                 </h2>
+
+                <h3 class="partners_wrapper-title">
+                    <div class="third">
+
+                    </div>
+                </h3>
+                <ul class="partners_wrapper-list">
+                    <li>- Индивидуальный подход к каждому клиенту</li>
+                    <li>- Возможность сделать мебель более функциональной</li>
+                    <li>- Доступные цены от производителя</li>
+                    <li>- Качественные материалы и комплектующие</li>
+                    <li>- Минимальные сроки выполнения заказов</li>
+                    <li>- Профессиональная команда с большим опытом работы</li>
+                    <li>- Сервис и гарантийное обслуживание</li>
+                </ul>
             </div>
                 
             <div class="partners_link">
@@ -194,16 +237,18 @@
                         Закажите <br> <span class="accent">дизайн-проект</span>
                     </h2>
 
-                    <h3 class="design_wrapper-title">Преимущества изготовления мебели под заказ в компании «Lion-Lux»:</h3>
-                    <ul class="design_wrapper-list">
-                        <li>- Индивидуальный подход к каждому клиенту</li>
-                        <li>- Возможность сделать мебель более функциональной</li>
-                        <li>- Доступные цены от производителя</li>
-                        <li>- Качественные материалы и комплектующие</li>
-                        <li>- Минимальные сроки выполнения заказов</li>
-                        <li>- Профессиональная команда с большим опытом работы</li>
-                        <li>- Сервис и гарантийное обслуживание</li>
-                    </ul>
+                    <h3 class="design_wrapper-subtitle">Экспресс дизайн</h3>
+                    <p class="design_wrapper-text">
+                        Расстановка мебели в отдельно взятом помещении
+                    </p>
+
+                    <h3 class="design_wrapper-subtitle">Комплексный дизайн</h3>
+                    <p class="design_wrapper-text">
+                        Полный подробный альбом чертежей с развёртками по стенам
+                    </p>
+                    <p class="design_wrapper-text">
+                        Сопровождение - по согласованию
+                    </p>
 
                     <a href="#" class="btn">Заказать</a>
                 </div>
