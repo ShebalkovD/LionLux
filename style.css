@@ -465,7 +465,7 @@ section {
   width: 100%;
   height: 10rem;
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   z-index: 5;
   -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
@@ -476,7 +476,7 @@ section {
   width: 100%;
   height: 10rem;
   position: absolute;
-  bottom: 0;
+  bottom: -0.5rem;
   left: 0;
   z-index: 5;
   -webkit-clip-path: polygon(0 50%, 0% 100%, 100% 100%);
@@ -1138,7 +1138,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  padding-left: 32px;
+  padding-left: 3.2rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -1543,6 +1543,9 @@ section {
 .footer_logo {
   width: 20rem;
 }
+.footer_logo-mobile {
+  display: none;
+}
 .footer_socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1579,6 +1582,7 @@ section {
   font-size: 2.4rem;
   color: #fff;
   font-weight: 400;
+  padding-bottom: 0.5rem;
   margin-bottom: 2.4rem;
   position: relative;
   width: -webkit-fit-content;
@@ -1669,6 +1673,9 @@ section {
   .main .contacts_wrapper-info {
     width: 80%;
   }
+  .main .contacts .section_title {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 1024px) {
   .container {
@@ -1676,11 +1683,6 @@ section {
   }
   html {
     font-size: 8px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 7px;
   }
   .design_image {
     width: 40%;
@@ -1694,10 +1696,154 @@ section {
   .main .design_wrapper {
     max-width: 42rem;
   }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 15rem 0;
+  }
+  body {
+    padding-bottom: 48rem;
+  }
   .nav_list {
     display: none;
   }
   .nav .nav_burger {
     display: block;
+  }
+  .main .about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .about_img {
+    width: 100%;
+    max-width: 80%;
+    margin: 12rem 0 0;
+  }
+  .main .about_text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .main .about_text-heading {
+    width: 100%;
+  }
+  .main .about_text-info {
+    max-width: 100%;
+  }
+  .main .fasad_img {
+    display: none;
+  }
+  .main .fasad_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+  .main .fasad_wrapper-img {
+    max-width: 100%;
+  }
+  .main .fasad_wrapper-title {
+    padding-left: 0;
+  }
+  .main .fasad_wrapper-text {
+    padding-left: 0;
+  }
+  .main .fasad_wrapper-btns {
+    padding-left: 0;
+  }
+  .main .partners_wrapper-card {
+    width: 30rem;
+    height: 15rem;
+    padding: 2rem;
+  }
+  .main .partners_wrapper-title {
+    width: 100%;
+  }
+  .main .partners_wrapper-title div.third {
+    width: 100%;
+    min-height: 5.4rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4rem 0;
+  }
+  .main .partners_wrapper-title div.third::after {
+    padding-left: 3.2rem;
+  }
+  .main .partners_wrapper-inner {
+    min-height: 20rem;
+  }
+  .main .service .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .main .service_wrapper {
+    max-width: 100%;
+    margin-bottom: 7.2rem;
+  }
+  .main .service_btns {
+    width: 100%;
+  }
+  .main .service_btns-item {
+    width: 100%;
+  }
+  .footer_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer_wrapper-links {
+    margin-bottom: 4.8rem;
+  }
+  .footer_logo {
+    display: none;
+  }
+  .footer_logo-mobile {
+    display: block;
+  }
+  .footer_socials {
+    margin-top: 2.4rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer_list {
+    margin: 0 3.2rem;
+    width: 15rem;
+  }
+  .footer_list-title {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .footer_list-item {
+    text-align: left;
+  }
+  .footer_confidence {
+    margin: 0 auto;
+    margin-top: 4.8rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

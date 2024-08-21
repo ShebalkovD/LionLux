@@ -307,7 +307,7 @@
             height: 10rem;
             
             position: absolute;
-            top: 0;
+            top: -1px;
             left: 0;
 
             z-index: 5;
@@ -320,7 +320,7 @@
                 height: 10rem;
                 
                 position: absolute;
-                bottom: 0;
+                bottom: -0.5rem;
                 left: 0;
 
                 z-index: 5;
@@ -933,7 +933,7 @@
                         display: flex;
                         align-items: center;
                         position: absolute;
-                        padding-left: 32px;
+                        padding-left: 3.2rem;
                         top: 0;
                         left: 0;
                         width: 100%;
@@ -1343,6 +1343,10 @@
 
     &_logo {
         width: 20rem;
+
+        &-mobile {
+            display: none;
+        }
     }
 
     &_socials {
@@ -1378,6 +1382,8 @@
             font-size: 2.4rem;
             color: #fff;
             font-weight: 400;
+
+            padding-bottom: 0.5rem;
 
             margin-bottom: 2.4rem;
             position: relative;
