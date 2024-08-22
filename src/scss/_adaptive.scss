@@ -75,7 +75,7 @@
     }
 
     body {
-        padding-bottom: 48rem;
+        padding-bottom: 100rem;
     }
 
     
@@ -94,15 +94,27 @@
 
     .main {
 
+        .first_logo {
+            width: 90%;
+            max-width: 90%;
+        }
+
+        .first_divider {
+            width: 80%;
+            margin-top: 1.2rem;
+        }
+
+        .first_subtitle {
+            text-align: center;
+            max-width: 80%;
+        }
         .about {
             .container {
                 flex-direction: column;
             }
 
             &_img {
-                width: 100%;
-                max-width: 80%;
-                margin: 12rem 0 0;
+                display: none;
             }
         }
 
@@ -124,6 +136,7 @@
             }
 
             &_wrapper {
+                padding-top: 0;
                 display: flex;
                 align-items: start;
                 flex-direction: column;
@@ -144,6 +157,16 @@
                 &-btns {
                     padding-left: 0;
                 }
+
+                
+            }
+
+            .container::after {
+                width: 50%;
+                height: 50%;
+
+                right: -15%;
+                bottom: 25%;
             }
         }
 
@@ -193,12 +216,21 @@
     }
 
     .footer {
-
+        .container {
+            max-width: 100%;
+            padding: 0;
+        }
         &_wrapper {
             flex-direction: column;
             align-items: center;
             justify-content: center;
             &-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 0;
                 margin-bottom: 4.8rem;
             }
         }
@@ -209,32 +241,143 @@
 
         &_logo-mobile {
             display: block;
+            margin-bottom: 4.8rem;
         }
 
         &_socials {
             margin-top: 2.4rem;
             justify-content: center;
+
+            a {
+                margin: 0 1.2rem;
+            }
+
+            img {
+                width: 4.2rem;
+                height: 4.2rem;
+            }
         }
 
         &_list {
-            margin: 0 3.2rem;
-            width: 15rem;
+            display: none;
+        }
 
-            &-title {
-                font-size: 2rem;
-                width: 100%;
-            }
-
-            &-item {
-                text-align: left;
-            }
+        &_mobile_list {
+            display: block;
+            margin-bottom: 4.2rem;
         }
 
         &_confidence {
             margin: 0 auto;
-            margin-top: 4.8rem;
+            margin-top: 0;
             text-align: center;
             justify-content: center;
         }
+
+        
     }
+}
+
+@media (max-width: 425px) {
+    .section_title {
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+    }
+   
+    .container {
+        max-width: 100%;
+    }
+    .main {
+        .about_text::before {
+            font-size: 10rem;
+            left: -5%;
+        }
+
+        .fasad_wrapper {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .fasad_wrapper-btns .accent {
+            width: fit-content;
+            padding: 0 2rem;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .partners_wrapper-title div{
+            width: 100%;
+        }
+
+        .partners_wrapper-card {
+            width: 40%;
+            padding: 1rem;
+            margin: 2.4rem 1.2rem;
+            
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .partners_wrapper-inner {
+            justify-content: space-between;
+        }
+
+
+        .design {
+            .section_title {
+                text-align: center;
+            }
+            background: none;
+            .container {
+                flex-direction: column-reverse;
+
+            }
+
+            &_image {
+                display: block;
+                width: 80%;
+                margin-bottom: 14.2rem;
+            }
+
+            &_wrapper {
+                text-align: center;
+                &-subtitle {
+                    font-weight: 700;
+                }
+            }
+
+            .btn {
+                margin: 0 auto;
+                margin-top: 7.2rem;
+            }
+            
+        }
+
+        .contacts_wrapper-info {
+            width: 100%;
+        }
+
+        .contacts {
+            .btn {
+                right: -5%;
+            }
+        }
+
+    }  
+    
+    .footer_wrapper-menu {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 375px) {
+
 }
