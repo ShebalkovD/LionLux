@@ -1937,12 +1937,21 @@ section {
   }
 }
 @media (max-width: 425px) {
+  body {
+    font-size: 2.4rem;
+  }
   .section_title {
     font-size: 3.6rem;
     line-height: 3.6rem;
   }
   .container {
     max-width: 100%;
+  }
+  .main .about_text-info {
+    font-size: 2.4rem;
+  }
+  .main .terms_list-item {
+    font-size: 2.4rem;
   }
   .main .about_text::before {
     font-size: 10rem;
@@ -1951,6 +1960,9 @@ section {
   .main .fasad_wrapper {
     margin-left: 0;
     width: 100%;
+  }
+  .main .fasad_wrapper-text {
+    font-size: 2.4rem;
   }
   .main .fasad_wrapper-btns .accent {
     width: -webkit-fit-content;
@@ -2000,6 +2012,10 @@ section {
   }
   .main .design_wrapper-subtitle {
     font-weight: 700;
+    font-size: 2.8rem;
+  }
+  .main .design_wrapper-text {
+    font-size: 2.4rem;
   }
   .main .design .btn {
     margin: 0 auto;
