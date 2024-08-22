@@ -1148,12 +1148,6 @@ section {
 .main .partners_wrapper-title div.second::after {
   content: "Фурнитура и комплектующие";
 }
-.main .partners_wrapper-title div.third {
-  width: 84rem;
-}
-.main .partners_wrapper-title div.third::after {
-  content: "Условия изготовления мебели под заказ в компании «Lion-Lux»:";
-}
 .main .partners_wrapper-card {
   position: relative;
   display: -webkit-box;
@@ -1236,6 +1230,31 @@ section {
 }
 .main .partners_link a:hover {
   text-decoration: underline;
+}
+.main .terms .section_title {
+  text-align: center;
+  margin-bottom: 7.2rem;
+}
+.main .terms_list-item {
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0431372549);
+  padding: 7.2rem 4rem 4rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+.main .terms_list-item::before {
+  content: "";
+  display: block;
+  background-image: url("src/img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 3.6rem;
+  left: 4rem;
 }
 .main .design {
   overflow: hidden;
