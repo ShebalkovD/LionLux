@@ -191,9 +191,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 .header .nav_fixed {
-  background-color: #15161D;
-  -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
-          box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+  background-color: #1C1D26;
 }
 .header .nav .container:first-child {
   display: -webkit-box;
@@ -220,6 +218,9 @@ section {
 .header .nav_logo img {
   display: block;
   width: 100%;
+}
+.header .nav_logo-mobile {
+  display: none;
 }
 .header .nav_burger {
   display: none;
@@ -310,7 +311,7 @@ section {
   transition: all 0.3s ease-in-out;
   padding-top: 4.8rem;
   padding-bottom: 2.4rem;
-  background-color: #15161D;
+  background-color: #1C1D26;
 }
 .header_catalog .container {
   display: -webkit-box;
@@ -1245,7 +1246,7 @@ section {
 .main .terms_list-item {
   font-size: 2rem;
   color: #fff;
-  background-color: #232430;
+  background-color: #1C1D26;
   padding: 6.4rem 4rem 2.4rem 4rem;
   margin-bottom: 2.4rem;
   position: relative;
@@ -1544,8 +1545,8 @@ section {
   left: 0;
   z-index: 1;
   width: 100%;
-  padding: 2rem 0;
-  background-color: transparent;
+  padding: 6rem 0 2rem 0;
+  background-color: #1C1D26;
 }
 .footer_wrapper {
   display: -webkit-box;
@@ -1768,6 +1769,18 @@ section {
   }
   .nav .nav_burger {
     display: block;
+  }
+  .nav_logo {
+    display: none;
+  }
+  .header .nav_logo-mobile {
+    display: block;
+  }
+  .header .nav_logo-mobile img {
+    height: 2.8rem;
+  }
+  .header .nav_contacts {
+    display: none;
   }
   .main .first_logo {
     width: 90%;

@@ -78,7 +78,6 @@
         padding-bottom: 100rem;
     }
 
-
     
 
     
@@ -90,6 +89,28 @@
 
         .nav_burger {
             display: block;
+        }
+
+        &_logo {
+            display: none;
+        }
+
+        
+    }
+
+    .header {
+        .nav {
+            &_logo-mobile {
+                display: block;
+
+                img {
+                    height: 2.8rem;
+                }
+            }
+
+            &_contacts {
+                display: none;
+            }
         }
     }
 
