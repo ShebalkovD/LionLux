@@ -78,30 +78,6 @@
         padding-bottom: 100rem;
     }
 
-    .header {
-        .nav {
-            height: 8rem;
-
-            &_logo {
-                width: 4.8rem;
-                height: 4.8rem;
-            }
-
-            &_burger {
-                width: 4.8rem;
-            }
-
-            &_contacts {
-                font-size: 2.4rem;
-            }
-
-
-
-            .container:first-child {
-                height: 8rem;
-            }
-        }
-    }
 
     
 
@@ -122,16 +98,18 @@
         .first_logo {
             width: 90%;
             max-width: 90%;
+            height: fit-content;
         }
 
         .first_divider {
             width: 80%;
-            margin-top: 1.2rem;
+            margin-top: 3.6rem;
         }
 
         .first_subtitle {
             text-align: center;
             max-width: 80%;
+            font-size: 1.8rem;
         }
         .about {
             .container {
@@ -156,6 +134,28 @@
 
             
         }
+
+        .category {
+            height: 50vh;
+
+            &_divider {
+                height: 5rem;
+            }
+
+            .text {
+
+                .text_inner {
+                    width: 28rem;
+                    height: 4.4rem;
+                    font-size: 1.6rem;
+
+                    &::after {
+                        padding-left: 1.8rem;
+                    }
+                }
+            }
+        }
+
         .fasad {
 
             &_img {
@@ -342,6 +342,33 @@
         .about_text::before {
             font-size: 10rem;
             left: -5%;
+        }
+
+        .category {
+            
+
+            &_divider {
+                height: 5rem;
+            }
+
+            .text {
+
+                .text_inner {
+                    width: 16rem;
+                    height: 3.4rem;
+                    font-size: 1.2rem;
+                    line-height: 1.2rem;
+
+                    &::after {
+                        padding-left: 1.8rem;
+                    }
+                }
+
+               
+            }
+            .text3 {
+                left: 35%;
+            }
         }
 
         .fasad {
