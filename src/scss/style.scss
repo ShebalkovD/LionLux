@@ -1180,6 +1180,10 @@
             &-img {
                 max-width: 70%;
                 transform: translateX(10%);
+
+                img {
+                    width: 100%;
+                }
             }
         }
 

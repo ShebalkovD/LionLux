@@ -78,6 +78,31 @@
         padding-bottom: 100rem;
     }
 
+    .header {
+        .nav {
+            height: 8rem;
+
+            &_logo {
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+
+            &_burger {
+                width: 4.8rem;
+            }
+
+            &_contacts {
+                font-size: 2.4rem;
+            }
+
+
+
+            .container:first-child {
+                height: 8rem;
+            }
+        }
+    }
+
     
 
     
@@ -128,6 +153,8 @@
             &-info {
                 max-width: 100%;
             }
+
+            
         }
         .fasad {
 
@@ -290,8 +317,22 @@
     .container {
         max-width: 100%;
     }
+    
     .main {
 
+        .about_text {
+            .section_title {
+                font-size: 3.6rem;
+                line-height: 3.6rem;
+            }
+
+            &-btns {
+                justify-content: space-between;
+                .accent {
+                    margin: 0;
+                }
+            }
+        }
         .about_text-info {
             font-size: 2.4rem;
         }
@@ -303,6 +344,13 @@
             left: -5%;
         }
 
+        .fasad {
+            .section_title {
+                font-size: 3.6rem;
+                line-height: 3.6rem;
+            }
+        }
+
         .fasad_wrapper {
             margin-left: 0;
             width: 100%;
@@ -312,10 +360,15 @@
             }
         }
 
+        .fasad_wrapper-btns {
+            width: 100%;
+            justify-content: space-between;
+        }
+
         .fasad_wrapper-btns .accent {
             width: fit-content;
             padding: 0 2rem;
-
+            margin: 0;
             &::before {
                 display: none;
             }
@@ -326,9 +379,9 @@
         }
 
         .partners_wrapper-card {
-            width: 40%;
+            width: 49%;
             padding: 1rem;
-            margin: 2.4rem 1.2rem;
+            margin: 2.4rem 0;
             
             img {
                 width: 100%;
@@ -337,7 +390,12 @@
         }
 
         .partners_wrapper-inner {
+            padding: 0;
             justify-content: space-between;
+        }
+
+        .partners_link {
+            font-size: 1.2rem;
         }
 
 
@@ -345,7 +403,9 @@
             .section_title {
                 text-align: center;
             }
-            background: none;
+
+background: radial-gradient(49.32% 20.46% at 50% 23.81%, #1F233F 0%, #15161D 100%);
+
             .container {
                 flex-direction: column-reverse;
 

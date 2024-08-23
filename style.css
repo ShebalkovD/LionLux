@@ -1363,6 +1363,9 @@ section {
       -ms-transform: translateX(10%);
           transform: translateX(10%);
 }
+.main .contacts_wrapper-img img {
+  width: 100%;
+}
 .main .contacts_list {
   margin-bottom: 4.2rem;
 }
@@ -1753,6 +1756,22 @@ section {
   body {
     padding-bottom: 100rem;
   }
+  .header .nav {
+    height: 8rem;
+  }
+  .header .nav_logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .header .nav_burger {
+    width: 4.8rem;
+  }
+  .header .nav_contacts {
+    font-size: 2.4rem;
+  }
+  .header .nav .container:first-child {
+    height: 8rem;
+  }
   .nav_list {
     display: none;
   }
@@ -1947,6 +1966,18 @@ section {
   .container {
     max-width: 100%;
   }
+  .main .about_text .section_title {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
+  .main .about_text-btns {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main .about_text-btns .accent {
+    margin: 0;
+  }
   .main .about_text-info {
     font-size: 2.4rem;
   }
@@ -1957,6 +1988,10 @@ section {
     font-size: 10rem;
     left: -5%;
   }
+  .main .fasad .section_title {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
   .main .fasad_wrapper {
     margin-left: 0;
     width: 100%;
@@ -1964,11 +1999,18 @@ section {
   .main .fasad_wrapper-text {
     font-size: 2.4rem;
   }
+  .main .fasad_wrapper-btns {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .main .fasad_wrapper-btns .accent {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     padding: 0 2rem;
+    margin: 0;
   }
   .main .fasad_wrapper-btns .accent::before {
     display: none;
@@ -1977,21 +2019,25 @@ section {
     width: 100%;
   }
   .main .partners_wrapper-card {
-    width: 40%;
+    width: 49%;
     padding: 1rem;
-    margin: 2.4rem 1.2rem;
+    margin: 2.4rem 0;
   }
   .main .partners_wrapper-card img {
     width: 100%;
     max-width: 100%;
   }
   .main .partners_wrapper-inner {
+    padding: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .main .partners_link {
+    font-size: 1.2rem;
+  }
   .main .design {
-    background: none;
+    background: radial-gradient(49.32% 20.46% at 50% 23.81%, #1F233F 0%, #15161D 100%);
   }
   .main .design .section_title {
     text-align: center;
