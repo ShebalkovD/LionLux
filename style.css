@@ -192,6 +192,8 @@ section {
 }
 .header .nav_fixed {
   background-color: #15161D;
+  -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+          box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
 }
 .header .nav .container:first-child {
   display: -webkit-box;
@@ -377,6 +379,8 @@ section {
   -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
           transform: translateY(0%);
+  -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+          box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
 }
 .header_observertrigger {
   width: 1rem;
@@ -1078,9 +1082,11 @@ section {
   max-width: 85rem;
   margin-top: 10rem;
 }
+.main .fasad_mobile-img {
+  display: none;
+}
 .main .partners {
   padding-bottom: 0;
-  background: radial-gradient(74.09% 84.41% at 110.78% 105.7%, #1F233F 0%, #15161D 100%);
 }
 .main .partners .section_title {
   margin-bottom: 14rem;
@@ -1209,9 +1215,10 @@ section {
 .main .partners_link {
   font-size: 1.8rem;
   font-weight: 400;
-  background: radial-gradient(102.11% 541.43% at 21.38% 50%, rgba(207, 211, 254, 0.1) 0%, rgba(14, 19, 57, 0.1) 100%);
   -webkit-box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
           box-shadow: 0px 0px 66px -3px rgba(17, 25, 67, 0.2);
+  background: -webkit-gradient(linear, left top, right top, from(#232430), to(#15161D));
+  background: linear-gradient(90deg, #232430 0%, #15161D 100%);
   -webkit-backdrop-filter: blur(23.5px);
           backdrop-filter: blur(23.5px);
 }
@@ -1238,7 +1245,7 @@ section {
 .main .terms_list-item {
   font-size: 2rem;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.0431372549);
+  background-color: #232430;
   padding: 6.4rem 4rem 2.4rem 4rem;
   margin-bottom: 2.4rem;
   position: relative;
@@ -1811,11 +1818,18 @@ section {
   .main .category .text .text_inner::after {
     padding-left: 1.8rem;
   }
+  .main .fasad {
+    position: relative;
+    width: 100%;
+    padding-top: 40%;
+  }
   .main .fasad_img {
     display: none;
   }
   .main .fasad_wrapper {
-    padding-top: 0;
+    position: relative;
+    background-color: #15161D;
+    padding-top: 4.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1826,10 +1840,10 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 100%;
+    max-width: 95%;
   }
   .main .fasad_wrapper-img {
-    max-width: 100%;
+    display: none;
   }
   .main .fasad_wrapper-title {
     padding-left: 0;
@@ -1839,12 +1853,27 @@ section {
   }
   .main .fasad_wrapper-btns {
     padding-left: 0;
+    margin-top: 3.6rem;
+  }
+  .main .fasad_mobile-img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
   }
   .main .fasad .container::after {
-    width: 50%;
-    height: 50%;
-    right: -15%;
-    bottom: 25%;
+    display: none;
+  }
+  .main .fasad .container {
+    position: relative;
+    z-index: 4;
+    border-radius: 2.4rem 2.4rem 0 0;
+    max-width: 100%;
+    background-color: #15161D;
+    -webkit-box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
+            box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
   }
   .main .partners_wrapper-card {
     width: 30rem;
@@ -1976,9 +2005,11 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .main .about_text-btns .accent {
-    margin: 0;
+    margin: 4.2rem 0;
   }
   .main .about_text-info {
     font-size: 2.4rem;
@@ -2021,13 +2052,17 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main .fasad_wrapper-btns .accent {
+    margin: 4.2rem 0;
   }
   .main .fasad_wrapper-btns .accent {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     padding: 0 2rem;
-    margin: 0;
   }
   .main .fasad_wrapper-btns .accent::before {
     display: none;
