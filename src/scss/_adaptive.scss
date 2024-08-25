@@ -49,6 +49,20 @@
         .section_title {
             margin-bottom: 0;
         }
+
+        &_wrapper {
+
+            &-inner {
+
+                &::after {
+                    left: 62%;
+                }
+
+                &::before {
+                    left: 62%;
+                }
+            }
+        }
     }
 }
 
@@ -355,6 +369,16 @@
 
             &_wrapper {
                 width: 100%;
+
+                &-inner {
+
+                    &::before {
+                        left: 101%;
+                    }
+                    &::after {
+                        left: 101%;
+                    }
+                }
             }
             .container {
                 position: static;
@@ -367,7 +391,6 @@
             top: 10%;
             left: -40%;
             width: 100%;
-            max-width: fit-content;
             z-index: 2;
 
             img {

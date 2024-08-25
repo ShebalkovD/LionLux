@@ -1367,6 +1367,102 @@ section {
       -ms-transform: translateX(1rem);
           transform: translateX(1rem);
 }
+.main .contacts_wrapper-inner {
+  position: relative;
+}
+.main .contacts_wrapper-inner::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #A4814E;
+  -webkit-box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+          box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+  position: absolute;
+  top: 49%;
+  left: 92%;
+  -webkit-animation: point_shadow ease-in-out 5s infinite;
+          animation: point_shadow ease-in-out 5s infinite;
+}
+.main .contacts_wrapper-inner::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid #A4814E;
+  position: absolute;
+  top: 49%;
+  left: 92%;
+  -webkit-animation: point_border ease-in-out 3s infinite;
+          animation: point_border ease-in-out 3s infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@-webkit-keyframes point_shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 20.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 20.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes point_shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 20.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 20.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+            box-shadow: 0px 0px 11.3px 2px rgba(255, 255, 255, 0.41);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes point_border {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+}
+@keyframes point_border {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+}
 .main .contacts_wrapper-img {
   max-width: 70%;
   -webkit-transform: translateX(-20%);
@@ -1741,6 +1837,12 @@ section {
   .main .contacts .section_title {
     margin-bottom: 0;
   }
+  .main .contacts_wrapper-inner::after {
+    left: 62%;
+  }
+  .main .contacts_wrapper-inner::before {
+    left: 62%;
+  }
 }
 @media (max-width: 1024px) {
   .container {
@@ -1989,6 +2091,12 @@ section {
   .main .contacts_wrapper {
     width: 100%;
   }
+  .main .contacts_wrapper-inner::before {
+    left: 101%;
+  }
+  .main .contacts_wrapper-inner::after {
+    left: 101%;
+  }
   .main .contacts .container {
     position: static;
     padding: 0;
@@ -1998,9 +2106,6 @@ section {
     top: 10%;
     left: -40%;
     width: 100%;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
     z-index: 2;
   }
   .main .contacts_wrapper-img img {
