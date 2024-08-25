@@ -109,23 +109,12 @@
         .nav_burger {
             display: block;
         }
-
-        &_logo {
-            display: none;
-        }
-
-        
+   
     }
 
     .header {
         .nav {
-            &_logo-mobile {
-                display: block;
-
-                img {
-                    height: 2.8rem;
-                }
-            }
+            
 
             &_contacts {
                 display: none;
@@ -344,7 +333,8 @@
                     font-size: 2.8rem;
                 }
                 &-text {
-                    font-size: 2.4rem;
+                    font-size: 1.8rem;
+                    line-height: 1.8rem;
                 }
             }
 
@@ -499,6 +489,7 @@
     body {
         font-size: 2.4rem;
     }
+    
     .section_title {
         font-size: 3.6rem;
         line-height: 3.6rem;
@@ -517,19 +508,26 @@
             }
 
             &-btns {
+                .btn {
+
+                    width: 100%;
+                }
                 justify-content: space-between;
                 flex-wrap: wrap;
                 .accent {
-                    margin: 4.2rem 0;
+                    margin: 0 0 3.6rem 0;
                 }
             }
         }
+
         .about_text-info {
             font-size: 2.4rem;
         }
+
         .terms_list-item {
-            font-size: 2.4rem;
+            font-size: 1.8rem;
         }
+
         .about_text::before {
             font-size: 10rem;
             left: -5%;
@@ -567,6 +565,19 @@
                 font-size: 3.6rem;
                 line-height: 3.6rem;
             }
+
+            .btn {
+
+                width: 100%;
+            }
+
+            .btn.accent {
+                width: 100%;
+
+                &:hover {
+                    transform: translateY(-0.5rem);
+                }
+            }
         }
 
         .fasad_wrapper {
@@ -582,6 +593,8 @@
             width: 100%;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin-top: 7.2rem;
+
             .accent {
                 margin: 4.2rem 0;
             }

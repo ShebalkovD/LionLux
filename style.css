@@ -1878,15 +1878,6 @@ section {
   .nav .nav_burger {
     display: block;
   }
-  .nav_logo {
-    display: none;
-  }
-  .header .nav_logo-mobile {
-    display: block;
-  }
-  .header .nav_logo-mobile img {
-    height: 2.8rem;
-  }
   .header .nav_contacts {
     display: none;
   }
@@ -2072,7 +2063,8 @@ section {
     font-size: 2.8rem;
   }
   .main .design_wrapper-text {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
   }
   .main .design .btn {
     margin: 0 auto;
@@ -2238,14 +2230,17 @@ section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .main .about_text-btns .btn {
+    width: 100%;
+  }
   .main .about_text-btns .accent {
-    margin: 4.2rem 0;
+    margin: 0 0 3.6rem 0;
   }
   .main .about_text-info {
     font-size: 2.4rem;
   }
   .main .terms_list-item {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
   .main .about_text::before {
     font-size: 10rem;
@@ -2270,6 +2265,17 @@ section {
     font-size: 3.6rem;
     line-height: 3.6rem;
   }
+  .main .fasad .btn {
+    width: 100%;
+  }
+  .main .fasad .btn.accent {
+    width: 100%;
+  }
+  .main .fasad .btn.accent:hover {
+    -webkit-transform: translateY(-0.5rem);
+        -ms-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
   .main .fasad_wrapper {
     margin-left: 0;
     width: 100%;
@@ -2284,6 +2290,7 @@ section {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 7.2rem;
   }
   .main .fasad_wrapper-btns .accent {
     margin: 4.2rem 0;
