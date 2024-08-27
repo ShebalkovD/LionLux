@@ -176,6 +176,11 @@
             }
             &-info {
                 max-width: 100%;
+                display: none;
+
+                &.mobile {
+                    display: block;
+                }
             }
 
             &::before {
@@ -279,16 +284,19 @@
         }
 
 
-
+        .partners_wrapper {
+            padding: 10% 5%;
+        }
         .partners_wrapper-card {
-            width: 30rem;
-            height: 15rem;
+            width: 100%;
             padding: 2rem;
+            margin: 0;
         }
 
         .partners_wrapper-title {
-            
-            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 5.4rem;
         }
 
         .partners_wrapper-title div.third{
@@ -302,7 +310,7 @@
         }
 
         .partners_wrapper-inner {
-            min-height: 20rem;
+            grid-template-columns: 100fr 100fr;
         }
 
         .design {
@@ -522,6 +530,10 @@
 
         .about_text-info {
             font-size: 2.4rem;
+
+            &:nth-child(3) {
+                content: "Наша команда профессионалов и собственная производственная база с самым современным оборудованием позволит разработать и реализовать для вас практически любой проект корпусной мебели.";
+            }
         }
 
         .terms_list-item {
@@ -608,15 +620,13 @@
             }
         }
 
-        .partners_wrapper-title div{
-            width: 100%;
+        .partners_wrapper-title{
+            font-size: 2rem;
         }
 
         .partners_wrapper-card {
-            width: 49%;
             padding: 1rem;
-            margin: 2.4rem 0;
-            
+            height: 12rem;
             img {
                 width: 100%;
                 max-width: 100%;

@@ -944,6 +944,9 @@ section {
   font-weight: 400;
   margin-bottom: 3.6rem;
 }
+.main .about_text-info.mobile {
+  display: none;
+}
 .main .about_text-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1090,70 +1093,35 @@ section {
   padding-bottom: 0;
 }
 .main .partners .section_title {
-  margin-bottom: 14rem;
+  margin-bottom: 7.2rem;
   text-align: center;
 }
 .main .partners .section_title .accent {
   color: #A4814E;
 }
+.main .partners .section_title.partners_second {
+  margin-top: 7.2rem;
+  margin-bottom: 14rem;
+}
 .main .partners_wrapper {
   width: 100%;
+  padding: 4.8rem;
+  background-color: #1C1D26;
+  -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+          box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+  border-radius: 2.4rem;
+  margin-bottom: 4.8rem;
 }
 .main .partners_wrapper-title {
-  margin-bottom: 3.6rem;
-  background: transparent;
-  color: #15161D;
+  margin-bottom: 7.2rem;
+  margin-left: 2rem;
+  font-size: 3.2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: #15161D;
-  overflow: hidden;
-}
-.main .partners_wrapper-title div {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: transparent;
-  width: 42rem;
-  height: 5.4rem;
-  font-size: 2.4rem;
-  font-weight: 400;
-}
-.main .partners_wrapper-title div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
-  background: #A4814E;
-  z-index: 4;
-}
-.main .partners_wrapper-title div::after {
-  content: "Плитные материалы";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  padding-left: 3.2rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-}
-.main .partners_wrapper-title div.second::after {
-  content: "Фурнитура и комплектующие";
+  padding-bottom: 0.6rem;
+  border-bottom: 0.2rem solid #A4814E;
+  color: #fff;
 }
 .main .partners_wrapper-card {
   position: relative;
@@ -1167,7 +1135,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: transparent;
-  width: 40rem;
+  width: 100%;
   height: 20rem;
   margin: 3.6rem 2rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1184,19 +1152,10 @@ section {
   width: 35rem;
 }
 .main .partners_wrapper-inner {
-  min-height: 40vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 7rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 100fr 100fr 100fr;
+  gap: 2rem;
 }
 .main .partners_wrapper-subtitle {
   color: #fff;
@@ -1932,6 +1891,10 @@ section {
   }
   .main .about_text-info {
     max-width: 100%;
+    display: none;
+  }
+  .main .about_text-info.mobile {
+    display: block;
   }
   .main .about_text::before {
     display: none;
@@ -2008,13 +1971,18 @@ section {
     -webkit-box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
             box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
   }
+  .main .partners_wrapper {
+    padding: 10% 5%;
+  }
   .main .partners_wrapper-card {
-    width: 30rem;
-    height: 15rem;
+    width: 100%;
     padding: 2rem;
+    margin: 0;
   }
   .main .partners_wrapper-title {
-    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5.4rem;
   }
   .main .partners_wrapper-title div.third {
     width: 100%;
@@ -2028,7 +1996,7 @@ section {
     padding-left: 3.2rem;
   }
   .main .partners_wrapper-inner {
-    min-height: 20rem;
+    grid-template-columns: 100fr 100fr;
   }
   .main .design {
     background: radial-gradient(49.32% 20.46% at 50% 23.81%, #1F233F 0%, #15161D 100%);
@@ -2239,6 +2207,9 @@ section {
   .main .about_text-info {
     font-size: 2.4rem;
   }
+  .main .about_text-info:nth-child(3) {
+    content: "Наша команда профессионалов и собственная производственная база с самым современным оборудованием позволит разработать и реализовать для вас практически любой проект корпусной мебели.";
+  }
   .main .terms_list-item {
     font-size: 1.8rem;
   }
@@ -2304,13 +2275,12 @@ section {
   .main .fasad_wrapper-btns .accent::before {
     display: none;
   }
-  .main .partners_wrapper-title div {
-    width: 100%;
+  .main .partners_wrapper-title {
+    font-size: 2rem;
   }
   .main .partners_wrapper-card {
-    width: 49%;
     padding: 1rem;
-    margin: 2.4rem 0;
+    height: 12rem;
   }
   .main .partners_wrapper-card img {
     width: 100%;
