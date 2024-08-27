@@ -31,5 +31,5 @@ function start_animation(entries, observer) {
 }
 
 let observer = new IntersectionObserver( start_animation, options2);
-let category_section = document.querySelector(".triangle3");
+let category_section = document.querySelector(".triangle2");
 observer.observe(category_section)
