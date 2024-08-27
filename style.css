@@ -394,7 +394,7 @@ section {
 }
 
 .main .first {
-  min-height: 100vh;
+  min-height: 100lvh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +462,7 @@ section {
 .main .category {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100lvh;
   overflow: hidden;
 }
 .main .category_divider {
@@ -1794,7 +1794,7 @@ section {
     display: none;
   }
   .main .category {
-    height: 100lvh;
+    height: 100llvh;
   }
   .main .category_divider {
     height: 5rem;
@@ -2149,19 +2149,11 @@ section {
     left: -5%;
   }
   .main .category_divider {
-    height: 5rem;
+    height: 2%;
   }
-  .main .category .text .text_inner {
-    width: 16rem;
-    height: 3.4rem;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-  }
-  .main .category .text .text_inner::after {
-    padding-left: 1.8rem;
-  }
-  .main .category .text3 {
-    left: 35%;
+  .main .category .text {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
   }
   .main .fasad .section_title {
     font-size: 3.6rem;
