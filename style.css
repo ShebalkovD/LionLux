@@ -868,6 +868,7 @@ section {
   margin-left: 2.8rem;
 }
 .main .fasad {
+  margin-top: 20rem;
   overflow: hidden;
 }
 .main .fasad .container {
@@ -982,9 +983,6 @@ section {
 }
 .main .fasad_mobile-img {
   display: none;
-}
-.main .partners {
-  padding-bottom: 0;
 }
 .main .partners .section_title {
   margin-bottom: 7.2rem;
@@ -2108,6 +2106,9 @@ section {
   }
 }
 @media (max-width: 425px) {
+  .btn {
+    height: 8rem;
+  }
   body {
     font-size: 2.4rem;
   }
