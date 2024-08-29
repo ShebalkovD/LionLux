@@ -307,9 +307,13 @@
         }
 
         &_list {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            z-index: 5;
             list-style: none;
             width: 80%;
-            margin-top: 20%;
+            padding-left: 7.2rem;
 
             transition: 0.2s ease-in-out;
             transition-property: opacity, transform;
@@ -353,8 +357,10 @@
         }
 
         &_bottom-list {
+            position: static;
             width: 50%;
             margin: 0;
+            padding-left: 0;
 
             opacity: 1;
             transform: none;
@@ -390,12 +396,11 @@
             opacity: 0;
             transform: translateX(100%);
 
-            &-rightwrapper {
+            &-leftwrapper {
                 width: fit-content;
                 height: fit-content;
                 padding: 1rem;
-                padding-right: 7%;
-                margin-top: 1%;
+                margin-top: 4.4rem;
 
 
                 img {
@@ -404,7 +409,7 @@
                 }
             }
 
-            &-leftwrapper {
+            &-rightwrapper {
                 
 
                 display: flex;
@@ -416,6 +421,7 @@
                 height: 100%;
 
                 padding-bottom: 50%;
+                padding-right: 7%;
 
                 overflow-y: scroll;
                 
@@ -432,6 +438,7 @@
                 p {
                     color: #fff;
                     font-weight: 400;
+                    font-size: 2rem;
                     width: fit-content;
                     border-bottom: 0.1rem solid $accent;
                 }
