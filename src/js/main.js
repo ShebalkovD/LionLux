@@ -1,6 +1,6 @@
 let nav = document.querySelector('#nav')
 let catalog = document.querySelector('#header_catalog')
-
+let body = document.querySelector("body")
 let options = {
     root: null,
     rootMargin: "0px",
@@ -32,4 +32,24 @@ nav_catalog_btn.addEventListener('click', function() {
     }
     
     catalog.classList.toggle('active')
+})
+
+let burger_btn = document.querySelector("#nav_burger")
+let burger_menu = document.querySelector("#burger_menu")
+let burger_close_btn = document.querySelector("#burger_menu_close")
+
+burger_btn.addEventListener("click", function() {
+    burger_menu.style.display = "flex";
+    body.classList.add("no_scroll")
+    setTimeout(function(){
+        burger_menu.classList.add("burger_menu-active")
+    }, 100)
+})
+
+burger_close_btn.addEventListener("click", function() {
+    burger_menu.classList.remove("burger_menu-active")
+    body.classList.remove("no_scroll")
+    setTimeout(function(){
+        burger_menu.style.display = "none";
+    }, 200)
 })

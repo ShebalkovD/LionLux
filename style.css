@@ -392,6 +392,109 @@ section {
   z-index: 1;
   opacity: 0;
 }
+.header .burger_menu {
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  background-color: #15161D;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
+}
+.header .burger_menu-top {
+  height: 6rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .burger_menu-close {
+  display: block;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+.header .burger_menu_topwrapper {
+  background-color: #15161D;
+  height: calc(100dvh - 42rem);
+  padding-left: 7.2rem;
+}
+.header .burger_menu_bottomwrapper {
+  background-color: #1C1D26;
+  width: 100%;
+  height: 36rem;
+  padding-left: 7.2rem;
+}
+.header .burger_menu_list {
+  list-style: none;
+  width: 80%;
+}
+.header .burger_menu_list-item {
+  width: 100%;
+}
+.header .burger_menu_list-item a, .header .burger_menu_list-item span {
+  display: block;
+  color: #fff;
+  font-size: 2.4rem;
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0.4rem 0;
+}
+.header .burger_menu_list-item#mobile_catalog_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 2rem;
+}
+.header .burger_menu_list-item#mobile_catalog_btn img {
+  display: block;
+  width: 1.2rem;
+}
+.header .burger_menu_list-item:hover {
+  cursor: pointer;
+}
+.header .burger_menu_bottom-list {
+  width: 50%;
+  padding: 7.2rem 0;
+}
+.header .burger_menu_bottom-list a {
+  color: #838385;
+  font-size: 1.8rem;
+  padding: 0.3rem 0;
+  margin: 0.3rem 0;
+  font-weight: 700;
+}
+.header .burger_menu-active {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
 
 .main .first {
   min-height: 100lvh;
@@ -507,6 +610,11 @@ section {
 }
 .main .category_triangle:hover .category_triangle-wrapper {
   opacity: 0.4;
+}
+.main .category_triangle:hover .text .text_wrapper:before {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 .main .category .triangle1 {
   background-image: url(src/img/mask/home.jpg);
@@ -664,10 +772,36 @@ section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.main .category .text_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
   color: #fff;
   font-size: 4.8rem;
   line-height: 4.8rem;
   font-weight: 700;
+  z-index: 2;
+}
+.main .category .text_wrapper::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #15161D;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 .main .category .text1 {
   top: 15%;
@@ -2106,9 +2240,6 @@ section {
   }
 }
 @media (max-width: 425px) {
-  .btn {
-    height: 8rem;
-  }
   body {
     font-size: 2.4rem;
   }
@@ -2118,6 +2249,9 @@ section {
   }
   .container {
     max-width: 100%;
+  }
+  .main .about .btn {
+    height: 8rem;
   }
   .main .about_text .section_title {
     font-size: 3.6rem;
@@ -2161,6 +2295,7 @@ section {
     line-height: 3.6rem;
   }
   .main .fasad .btn {
+    height: 8rem;
     width: 100%;
   }
   .main .fasad .btn.accent {
