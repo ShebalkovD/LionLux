@@ -408,8 +408,12 @@ section {
   top: 0;
   left: 0;
   z-index: 300;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
   opacity: 0;
   -webkit-transform: translateX(10%);
       -ms-transform: translateX(10%);
@@ -437,16 +441,36 @@ section {
   background-color: #15161D;
   height: calc(100dvh - 42rem);
   padding-left: 7.2rem;
+  position: relative;
 }
 .header .burger_menu_bottomwrapper {
   background-color: #1C1D26;
   width: 100%;
-  height: 36rem;
+  height: 24rem;
   padding-left: 7.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 6;
 }
 .header .burger_menu_list {
   list-style: none;
   width: 80%;
+  margin-top: 20%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 .header .burger_menu_list-item {
   width: 100%;
@@ -478,9 +502,21 @@ section {
 .header .burger_menu_list-item:hover {
   cursor: pointer;
 }
+.header .burger_menu_list-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
 .header .burger_menu_bottom-list {
   width: 50%;
-  padding: 7.2rem 0;
+  margin: 0;
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
 }
 .header .burger_menu_bottom-list a {
   color: #838385;
@@ -488,6 +524,87 @@ section {
   padding: 0.3rem 0;
   margin: 0.3rem 0;
   font-weight: 700;
+}
+.header .burger_menu_catalog {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding-left: 7.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.header .burger_menu_catalog-leftwrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+.header .burger_menu_catalog-leftwrapper img {
+  width: 1.2rem;
+}
+.header .burger_menu_catalog-rightwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  width: 80%;
+  height: 100%;
+  padding-right: 7%;
+  padding-bottom: 50%;
+  overflow-y: scroll;
+}
+.header .burger_menu_catalog-item {
+  width: 90%;
+  margin-bottom: 4.8rem;
+}
+.header .burger_menu_catalog-item img {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+.header .burger_menu_catalog-item p {
+  color: #fff;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 0.1rem solid #A4814E;
+}
+.header .burger_menu_catalog-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .header .burger_menu-active {
   opacity: 1;
