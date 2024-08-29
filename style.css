@@ -889,6 +889,8 @@ section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
 }
 .main .category .text_wrapper {
   position: relative;
@@ -897,8 +899,6 @@ section {
   overflow: hidden;
   padding: 1rem;
   color: #fff;
-  font-size: 4.8rem;
-  line-height: 4.8rem;
   font-weight: 700;
   z-index: 2;
 }
