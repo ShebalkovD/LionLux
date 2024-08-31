@@ -517,6 +517,7 @@ section {
 }
 .header .burger_menu_list-item {
   width: 100%;
+  margin: 0.8rem 0;
 }
 .header .burger_menu_list-item a, .header .burger_menu_list-item span {
   display: block;
@@ -524,7 +525,6 @@ section {
   font-size: 2.8rem;
   width: 100%;
   padding: 0.8rem 0;
-  margin: 0.8rem 0;
 }
 .header .burger_menu_list-item#mobile_catalog_btn {
   display: -webkit-box;
@@ -581,6 +581,7 @@ section {
   z-index: 400;
   width: 100%;
   height: 100%;
+  padding-bottom: 15%;
   overflow-y: scroll;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -947,7 +948,7 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #15161D;
+  background-color: #1C1D26;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
