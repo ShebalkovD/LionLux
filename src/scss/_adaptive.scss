@@ -109,6 +109,8 @@
         .nav_burger {
             display: block;
         }
+
+        
    
     }
 
@@ -119,7 +121,18 @@
             &_contacts {
                 display: none;
             }
+
+            &_logo {
+                width: 3.6rem;
+                height: 3.6rem;
+            }
+
+            .container:first-child {
+                height: 8rem;
+            }
         }
+
+        
     }
 
     .main {

@@ -31,12 +31,12 @@
             justify-content: space-between;
             align-items: center;
 
-            height: 8rem;
+            height: 6rem;
         }
 
         &_logo {
-            width: 3.6rem;
-            height: 3.6rem;
+            width: 2.8rem;
+            height: 2.8rem;
             opacity: 0.8;
             
             transition: opacity 0.2s ease-in-out;
@@ -1757,5 +1757,6 @@
 
 }
 
+@import "scroll_animation.scss";
 @import "adaptive.scss";
 
