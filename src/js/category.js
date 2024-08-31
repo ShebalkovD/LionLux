@@ -1,3 +1,5 @@
+
+
 let line1 = document.querySelector('#line')
 let line2 = document.querySelector('#line2')
 let section_category = document.querySelector('.category')
@@ -15,7 +17,7 @@ function start_animation(entries, observer) {
     if (entry.isIntersecting) {
         line1.classList.add("line_inner-active");
         line2.classList.add("line_inner-active");
-        section_category.classList.add('category_animated')
+        section_category.className = "category category_animated"
 
         setTimeout(function() {
             let elements = document.querySelectorAll('.category_triangle')
