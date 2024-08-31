@@ -10,7 +10,6 @@ const scroll_observer = new IntersectionObserver((entries) => {
     
 },
 { threshold: 0.5,
-    rootMargin: "-100px"
    
 });
 
