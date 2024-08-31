@@ -719,7 +719,7 @@ section {
 .main .category {
   position: relative;
   width: 100%;
-  height: 100lvh;
+  height: 100vh;
   overflow: hidden;
 }
 .main .category_divider {
