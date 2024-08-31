@@ -270,11 +270,13 @@
         transform: translateX(10%);
         
         &-top {
-            height: 6rem;
+            height: 8rem;
             width: 100%;
             display: flex;
-            justify-content: end;
+            justify-content: space-between;
             align-items: center;
+
+            border-bottom: 0.4rem solid $contrast_bg;
         }
 
         &-close {
@@ -283,14 +285,43 @@
             width: 2.8rem;
         }
 
-        &_topwrapper {
-            background-color: $section_bg;
-            height: calc(100dvh - 42rem);
-            padding-left: 7.2rem;
+        #burger_catalog_close {
+            display: block;
+            padding: 1rem;
 
-            position: relative;
-
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
             
+
+            img {
+                
+                display: block;
+                width: 1.4rem;
+
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        &_firstpage {
+            background-color: $section_bg;
+            // height: calc(100dvh - 42rem);
+            height: 100dvh;
+            position: relative;
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;;
+
+            transition: 0.2s ease-in-out;
+            transition-property: opacity, transform;
+
+            opacity: 0;
+            transform: translateX(-100%);
         }
 
         &_bottomwrapper {
@@ -307,19 +338,12 @@
         }
 
         &_list {
-            position: absolute;
-            top: 20%;
-            left: 0;
-            z-index: 5;
+            margin-top: 40%;
             list-style: none;
             width: 80%;
             padding-left: 7.2rem;
 
-            transition: 0.2s ease-in-out;
-            transition-property: opacity, transform;
-
-            opacity: 0;
-            transform: translateX(-100%);
+           
 
             &-item {
                 width: 100%;
@@ -327,10 +351,10 @@
                 a,span {
                     display: block;
                     color: #fff;
-                    font-size: 2.4rem;
+                    font-size: 3.2rem;
                     width: 100%;
-                    padding: 0.4rem;
-                    margin: 0.4rem 0;
+                    padding: 0.8rem 0;
+                    margin: 0.8rem 0;
                 }
 
                 &#mobile_catalog_btn {
@@ -341,7 +365,7 @@
 
                     img {
                         display: block;
-                        width: 1.2rem;
+                        width: 1.4rem;
                     }
                 }
 
@@ -377,18 +401,27 @@
 
         &_catalog {
             position: absolute;
-            top: 20%;
+            top: 8rem;
             left: 0;
             z-index: 5;
 
             width: 100%;
             height: 100%;
 
-            padding-left: 7.2rem;
+            padding: 15% 0;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+            }
+
              
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
+            
+
+
+            overflow-y: scroll;
 
             transition: 0.2s ease-in-out;
             transition-property: opacity, transform;
@@ -403,27 +436,13 @@
                 margin-top: 4.4rem;
 
 
-                img {
-                    display: block;
-                    width: 1.2rem;
-                }
+                
             }
 
             &-rightwrapper {
                 
 
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: start;
-
-                width: 80%;
-                height: 100%;
-
-                padding-bottom: 50%;
-                padding-right: 7%;
-
-                overflow-y: scroll;
+                
                 
             }
 

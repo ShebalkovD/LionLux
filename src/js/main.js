@@ -38,7 +38,7 @@ let burger_btn = document.querySelector("#nav_burger")
 let burger_menu = document.querySelector("#burger_menu")
 let burger_close_btn = document.querySelector("#burger_menu_close")
 let burger_catalog_btn = document.querySelector("#mobile_catalog_btn")
-let burger_catalog_close_btn = document.querySelector("#mobile_catalog-close")
+let burger_catalog_close_btn = document.querySelector("#burger_catalog_close")
 let burger_list= document.querySelector("#burger_list")
 let burger_catalog= document.querySelector("#burger_catalog")
 
@@ -58,6 +58,7 @@ burger_close_btn.addEventListener("click", function() {
         burger_menu.style.display = "none";
         burger_catalog.classList.remove("burger_menu_catalog-active")
         burger_list.classList.add("burger_menu_list-active")
+        burger_catalog_close_btn.classList.remove("active")
     }, 200)
 })
 
@@ -65,11 +66,13 @@ burger_close_btn.addEventListener("click", function() {
 
 
 burger_catalog_btn.addEventListener("click", function() {
+    burger_catalog_close_btn.classList.add("active")
     burger_list.classList.remove("burger_menu_list-active")
     burger_catalog.classList.add("burger_menu_catalog-active")
 })
 
 burger_catalog_close_btn.addEventListener("click", function() {
+    burger_catalog_close_btn.classList.remove("active")
     burger_catalog.classList.remove("burger_menu_catalog-active")
     burger_list.classList.add("burger_menu_list-active")
 })
