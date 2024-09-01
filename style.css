@@ -1836,6 +1836,9 @@ section {
       -ms-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
 }
+.main .contacts_socials.contacts_first {
+  margin-bottom: 4.8rem;
+}
 .main .service .container {
   display: -webkit-box;
   display: -ms-flexbox;
