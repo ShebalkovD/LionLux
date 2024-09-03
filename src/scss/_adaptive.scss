@@ -1,3 +1,13 @@
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    html {
+        font-size: 11px;
+    }
+}
+
 @media (max-width: 1440px) {
 
     .container {
@@ -80,9 +90,11 @@
         width: 40%;
         .rastr {
             max-width: 100%;
+            width: 100%;
         }
         .vector {
             max-width: 120%;
+            width: 120%;
         }
     }
 
@@ -267,9 +279,10 @@
         }
 
         .fasad {
+            margin-top: 20rem;
             position: relative;
             width: 100%;
-            padding-top: 40%;
+            padding-top: 60%;
 
             &_img {
                 display: none;
@@ -282,8 +295,9 @@
                 display: flex;
                 align-items: start;
                 flex-direction: column;
-                max-width: 95%;
+                max-width: 100%;
                 margin-left: 0;
+                width: 100%;
                 
 
                 &-img {
@@ -298,11 +312,14 @@
 
                 &-text {
                     padding-left: 0;
+                    width: 100%;
+                    max-width: 100%;
                 }
 
                 &-btns {
                     padding-left: 0;
                     margin-top: 3.6rem;
+                    width: 100%;
                 }
 
                 
@@ -555,6 +572,22 @@
     }
 }
 
+@media (max-width: 560px) {
+    .main {
+
+        .fasad {
+            &_wrapper-btns .wrapper {
+                flex-direction: column;
+                margin-top: 0;
+                 .btn {
+                    width: 100%;
+                    margin-top: 3.6rem;
+                 }
+            }
+        }
+    }
+}
+
 @media (max-width: 425px) {
 
     
@@ -667,9 +700,7 @@
             flex-wrap: wrap;
             margin-top: 7.2rem;
 
-            .accent {
-                margin: 4.2rem 0;
-            }
+
         }
 
         .fasad_wrapper-btns .accent {

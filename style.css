@@ -1323,7 +1323,6 @@ section {
   margin-left: 2.8rem;
 }
 .main .fasad {
-  margin-top: 20rem;
   overflow: hidden;
 }
 .main .fasad .container {
@@ -1333,32 +1332,16 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-}
-.main .fasad .container::after {
-  content: "";
-  display: block;
-  width: 76rem;
-  height: 76rem;
-  opacity: 0.02;
-  background-image: url("src/img/fasad-vector.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: -35%;
-  bottom: -15%;
-  z-index: -1;
 }
 .main .fasad_img {
   display: block;
   width: 55rem;
 }
 .main .fasad_wrapper {
-  padding-top: 10rem;
   margin-left: 2rem;
 }
 .main .fasad_wrapper-title {
@@ -1386,39 +1369,36 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+.main .fasad_wrapper-btns .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 4.8rem;
+}
+.main .fasad_wrapper-btns .btn {
+  width: 100%;
+}
 .main .fasad_wrapper-btns .accent {
-  margin-left: 4.8rem;
   background-color: transparent;
   border: 1px solid #A4814E;
   color: #A4814E;
   position: relative;
-  width: 26rem;
-}
-.main .fasad_wrapper-btns .accent:hover {
-  -webkit-transform: translateX(1rem);
-      -ms-transform: translateX(1rem);
-          transform: translateX(1rem);
-  background-color: #A4814E;
-  color: #fff;
-}
-.main .fasad_wrapper-btns .accent:hover::before {
-  background-image: url("src/img/btn-arrow-white.svg");
-}
-.main .fasad_wrapper-btns .accent::before {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 1.2rem;
-  background-image: url("src/img/btn-arrow.svg");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  right: 2rem;
-  top: 2.4rem;
+  width: 48%;
 }
 .main .fasad_wrapper-btns .accent::after {
   content: "";
@@ -1431,6 +1411,9 @@ section {
   position: absolute;
   right: -1rem;
   top: -1.4rem;
+}
+.main .fasad_wrapper-btns .accent#arbor_btn::after {
+  background-image: url("src/img/arbor_mini.svg");
 }
 .main .fasad_wrapper-img {
   max-width: 85rem;
@@ -2168,6 +2151,14 @@ section {
     opacity: 1;
   }
 }
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1600px;
+  }
+  html {
+    font-size: 11px;
+  }
+}
 @media (max-width: 1440px) {
   .container {
     max-width: 1200px;
@@ -2227,9 +2218,11 @@ section {
   }
   .design_image .rastr {
     max-width: 100%;
+    width: 100%;
   }
   .design_image .vector {
     max-width: 120%;
+    width: 120%;
   }
   .main .design_wrapper {
     max-width: 42rem;
@@ -2369,9 +2362,10 @@ section {
     background-size: 140% 140%;
   }
   .main .fasad {
+    margin-top: 20rem;
     position: relative;
     width: 100%;
-    padding-top: 40%;
+    padding-top: 60%;
   }
   .main .fasad_img {
     display: none;
@@ -2390,8 +2384,9 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 95%;
+    max-width: 100%;
     margin-left: 0;
+    width: 100%;
   }
   .main .fasad_wrapper-img {
     display: none;
@@ -2401,10 +2396,13 @@ section {
   }
   .main .fasad_wrapper-text {
     padding-left: 0;
+    width: 100%;
+    max-width: 100%;
   }
   .main .fasad_wrapper-btns {
     padding-left: 0;
     margin-top: 3.6rem;
+    width: 100%;
   }
   .main .fasad_mobile-img {
     display: block;
@@ -2637,6 +2635,19 @@ section {
             justify-content: center;
   }
 }
+@media (max-width: 560px) {
+  .main .fasad_wrapper-btns .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+  .main .fasad_wrapper-btns .wrapper .btn {
+    width: 100%;
+    margin-top: 3.6rem;
+  }
+}
 @media (max-width: 425px) {
   body {
     font-size: 2.4rem;
@@ -2719,9 +2730,6 @@ section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 7.2rem;
-  }
-  .main .fasad_wrapper-btns .accent {
-    margin: 4.2rem 0;
   }
   .main .fasad_wrapper-btns .accent {
     width: -webkit-fit-content;
