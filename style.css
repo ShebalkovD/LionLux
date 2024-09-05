@@ -1340,15 +1340,20 @@ section {
 .main .fasad_img {
   display: block;
   width: 55rem;
+  -webkit-transform: translateY(2.4rem);
+      -ms-transform: translateY(2.4rem);
+          transform: translateY(2.4rem);
 }
 .main .fasad_wrapper {
   margin-left: 2rem;
+  width: 50%;
 }
 .main .fasad_wrapper-title {
   font-size: 4.2rem;
   color: #A4814E;
   font-weight: 700;
   padding-left: 5rem;
+  margin-bottom: 4.8rem;
 }
 .main .fasad_wrapper-text {
   font-size: 2rem;
@@ -1362,6 +1367,95 @@ section {
 }
 .main .fasad_wrapper-text a:hover {
   text-decoration: underline;
+}
+.main .fasad_wrapper-container {
+  width: 100%;
+  position: relative;
+}
+.main .fasad_wrapper-container .card_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.main .fasad_wrapper-container .card_wrapper a p {
+  font-weight: 500;
+}
+.main .fasad_wrapper-card {
+  display: block;
+  position: relative;
+  width: 48%;
+  background-color: #1C1D26;
+  margin-bottom: 3.2rem;
+  padding: 2.4rem;
+  padding-bottom: 10rem;
+  border-radius: 2.4rem;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition-property: color background-color;
+  transition-property: color background-color;
+}
+.main .fasad_wrapper-card .normal {
+  color: #fff;
+}
+.main .fasad_wrapper-card::after {
+  content: "";
+  display: block;
+  background-image: url("src/img/btn-arrow-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.6rem;
+  height: 1.8rem;
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.main .fasad_wrapper-card h2 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 3.2rem;
+}
+.main .fasad_wrapper-card h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+.main .fasad_wrapper-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+.main .fasad_wrapper-card span {
+  color: #A4814E;
+}
+.main .fasad_wrapper-card.first_card {
+  width: 100%;
+  background-color: #fff;
+  color: #15161D;
+}
+.main .fasad_wrapper-card.first_card p {
+  font-weight: 700;
+}
+.main .fasad_wrapper-card.first_card::after {
+  background-image: url("src/img/btn-arrow-dark.svg");
+}
+.main .fasad_wrapper-card:hover::after {
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
 }
 .main .fasad_wrapper-btns {
   padding-left: 5rem;

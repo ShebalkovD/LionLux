@@ -969,16 +969,20 @@
         &_img {
             display: block;
             width: 55rem;
+            transform: translateY(2.4rem);
         }
 
         &_wrapper {
             margin-left: 2rem;
+            width: 50%;
+            
 
             &-title {
                 font-size: $title;
                 color: $accent;
                 font-weight: 700;
                 padding-left: 5rem;
+                margin-bottom: 4.8rem;
             }
 
             &-text {
@@ -995,6 +999,111 @@
                         text-decoration: underline;
                     }
                 }
+            }
+
+            &-container {
+                width: 100%;
+                position: relative;
+
+                .card_wrapper {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+
+                    a{
+                        
+                        
+                        p {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            
+            &-card {
+                display: block;
+                position: relative;
+                width: 48%;
+                
+                background-color: $contrast_bg;
+                margin-bottom: 3.2rem;
+                padding: 2.4rem;
+                padding-bottom: 10rem;
+
+                .normal {
+                    color: #fff;
+                }
+
+                
+                
+
+                border-radius: 2.4rem;
+
+                color: #fff;
+
+                transition: 0.2s ease-in-out;
+                transition-property: color background-color;
+
+                &::after {  
+                    content: "";
+                    display: block;
+
+                    background-image: url('src/img/btn-arrow-white.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    width: 3.6rem;
+                    height: 1.8rem;;
+                    position: absolute;
+                    right: 4rem;
+                    bottom: 4rem;
+
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                h2 {
+                    font-size: 4.2rem;
+                    font-weight: 400;
+                    text-align: right;
+                    margin-bottom: 3.2rem;
+                }
+
+                h3 {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    margin-bottom: 3.2rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    text-align: left;
+                }
+
+                span {
+                    color: $accent;
+
+                }
+
+                &.first_card {
+                    width: 100%;
+                    background-color: #fff;
+                    p {
+                        font-weight: 700;
+                    }
+                    color: $section_bg;
+
+                    &::after {
+                        background-image: url('src/img/btn-arrow-dark.svg');
+                    }
+                }
+
+                &:hover::after {
+                    transform: translateX(1rem);
+                }
+
             }
 
             &-btns {
