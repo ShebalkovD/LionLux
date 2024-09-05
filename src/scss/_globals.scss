@@ -86,3 +86,28 @@ section {
         transform: translateY(-0.5rem);
     }
 }
+
+.divider {
+    display: block;
+    height: 5rem;
+    width: 100%;
+    background-color: $section_bg;
+
+    position: absolute;
+
+    z-index: 5;
+
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+    &_bottom {
+        display: block;
+        height: 5rem;
+        width: 100%;
+        background-color: $section_bg;
+
+        position: absolute;
+
+        z-index: 5;
+        clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+    }
+}

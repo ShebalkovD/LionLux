@@ -174,6 +174,27 @@ section {
           transform: translateY(-0.5rem);
 }
 
+.divider {
+  display: block;
+  height: 5rem;
+  width: 100%;
+  background-color: #15161D;
+  position: absolute;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+.divider_bottom {
+  display: block;
+  height: 5rem;
+  width: 100%;
+  background-color: #15161D;
+  position: absolute;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+}
+
 .preloader {
   width: 100%;
   height: 100dvh;
@@ -1325,6 +1346,9 @@ section {
 .main .fasad {
   overflow: hidden;
 }
+.main .fasad .divider {
+  display: none;
+}
 .main .fasad .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1340,9 +1364,9 @@ section {
 .main .fasad_img {
   display: block;
   width: 55rem;
-  -webkit-transform: translateY(2.4rem);
-      -ms-transform: translateY(2.4rem);
-          transform: translateY(2.4rem);
+  -webkit-transform: translateY(3.6rem);
+      -ms-transform: translateY(3.6rem);
+          transform: translateY(3.6rem);
 }
 .main .fasad_wrapper {
   margin-left: 2rem;
@@ -1350,9 +1374,8 @@ section {
 }
 .main .fasad_wrapper-title {
   font-size: 4.2rem;
-  color: #A4814E;
+  color: #fff;
   font-weight: 700;
-  padding-left: 5rem;
   margin-bottom: 4.8rem;
 }
 .main .fasad_wrapper-text {
@@ -1387,15 +1410,20 @@ section {
 .main .fasad_wrapper-container .card_wrapper a p {
   font-weight: 500;
 }
+.main .fasad_wrapper-container .card_wrapper a:last-child {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
 .main .fasad_wrapper-card {
   display: block;
   position: relative;
   width: 48%;
   background-color: #1C1D26;
+  -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
+          box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
   margin-bottom: 3.2rem;
   padding: 2.4rem;
   padding-bottom: 10rem;
-  border-radius: 2.4rem;
   color: #fff;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -1533,7 +1561,6 @@ section {
   background-color: #1C1D26;
   -webkit-box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
           box-shadow: 0px 4px 28px rgba(21, 22, 29, 0.25);
-  border-radius: 2.4rem;
   margin-bottom: 4.8rem;
 }
 .main .partners_wrapper-title {
@@ -2321,6 +2348,19 @@ section {
   .main .design_wrapper {
     max-width: 42rem;
   }
+  .main .fasad .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main .fasad_wrapper {
+    width: 100%;
+  }
+  .main .fasad_img {
+    width: 100%;
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   section {
@@ -2459,7 +2499,7 @@ section {
     margin-top: 20rem;
     position: relative;
     width: 100%;
-    padding-top: 60%;
+    padding-top: 115%;
   }
   .main .fasad_img {
     display: none;
@@ -2514,9 +2554,17 @@ section {
     z-index: 4;
     max-width: 100%;
     background-color: #15161D;
-    border-radius: 2.4rem 2.4rem 0 0;
-    -webkit-box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
-            box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
+  }
+  .main .fasad .divider {
+    display: block;
+  }
+  .main .fasad_divider {
+    top: -0.1rem;
+    left: 0;
+  }
+  .main .fasad_divider-bottom {
+    top: -4.9rem;
+    left: 0;
   }
   .main .partners_wrapper {
     padding: 10% 5%;
@@ -2740,6 +2788,22 @@ section {
   .main .fasad_wrapper-btns .wrapper .btn {
     width: 100%;
     margin-top: 3.6rem;
+  }
+  .main .fasad_wrapper-card {
+    width: 100%;
+  }
+  .main .fasad_wrapper .card_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .fasad_wrapper .card_wrapper a:last-child {
+    -webkit-animation-delay: 0ms;
+            animation-delay: 0ms;
   }
 }
 @media (max-width: 425px) {

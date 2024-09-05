@@ -101,6 +101,23 @@
     .main .design_wrapper {
         max-width: 42rem;
     }
+
+    .main {
+        .fasad {
+            .container {
+                flex-direction: column-reverse;
+            }
+    
+            &_wrapper {
+                width: 100%;
+            }
+
+            &_img {
+                width: 100%;
+                display: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -279,10 +296,11 @@
         }
 
         .fasad {
+            
             margin-top: 20rem;
             position: relative;
             width: 100%;
-            padding-top: 60%;
+            padding-top: 115%;
 
             &_img {
                 display: none;
@@ -348,10 +366,20 @@
 
                 max-width: 100%;
                 background-color: $section_bg;
-                
-                border-radius: 2.4rem 2.4rem 0 0;
-                box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
+            }
 
+            .divider {
+                display: block;
+            }
+
+            &_divider {
+                top: -0.1rem;
+                left: 0;
+
+                &-bottom {
+                    top: -4.9rem;
+                    left: 0;    
+                }
             }
         }
 
@@ -583,6 +611,24 @@
                     width: 100%;
                     margin-top: 3.6rem;
                  }
+            }
+
+            &_wrapper {
+
+                &-card {
+                    width: 100%;
+                }
+
+                .card_wrapper {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        &:last-child {
+                            animation-delay: 0ms;
+                        }
+                    }
+                }
             }
         }
     }
