@@ -1282,6 +1282,9 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
+.main .about .divider_trigger {
+  display: none;
+}
 .main .about_text {
   max-width: 72rem;
   position: relative;
@@ -2413,9 +2416,20 @@ section {
             flex-direction: column;
     background-color: #15161D;
     max-width: 100%;
-    border-radius: 2.4rem 2.4rem 0 0;
     -webkit-box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
             box-shadow: 0px -4px 28px rgba(21, 22, 29, 0.25);
+  }
+  .main .about_divider {
+    top: 0.1rem;
+    left: 0%;
+    z-index: 4;
+  }
+  .main .about .divider_trigger {
+    display: block;
+    height: 5rem;
+    background: transparent;
+    width: 100%;
+    position: relative;
   }
   .main .about_img {
     position: absolute;
