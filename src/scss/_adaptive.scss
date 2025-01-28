@@ -86,6 +86,32 @@
         font-size: 8px;
     }
 
+    .nav {
+        &_list {
+            display: none;
+        }
+
+        .nav_burger {
+            display: block;
+        }
+
+        .nav_contacts {
+            display: none;
+        }
+
+        .nav_contacts-mobile {
+            display: block;
+        }
+
+        .nav_mobile_container {
+            display: flex;
+            align-items:center
+        }
+
+        
+   
+    }
+
     .design_image {
         width: 40%;
         .rastr {
@@ -130,22 +156,7 @@
         padding-bottom: 100rem;
     }
 
-    .nav {
-        &_list {
-            display: none;
-        }
-
-        .nav_burger {
-            display: block;
-        }
-
-        .nav_contacts-mobile {
-            display: block;
-        }
-
-        
-   
-    }
+    
 
     .header {
         .nav {
@@ -162,6 +173,15 @@
 
             .container:first-child {
                 height: 8rem;
+            }
+        }
+
+        .burger_menu_catalog {
+            &-item {
+                p {
+                    font-size: 1.8rem;
+                    line-height: 2rem;
+                }
             }
         }
 
@@ -251,8 +271,6 @@
         }
 
         .category {
-
-            height: 100llvh;
 
             &_divider {
                 height: 5rem;
