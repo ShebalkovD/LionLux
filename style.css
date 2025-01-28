@@ -485,6 +485,16 @@ section {
 .header .nav_contacts:hover {
   opacity: 1;
 }
+.header .nav_contacts-mobile {
+  opacity: 0.8;
+  display: none;
+  margin-right: 1rem;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.header .nav_contacts-mobile:hover {
+  opacity: 1;
+}
 .header_catalog {
   position: fixed;
   top: 6rem;
@@ -2376,6 +2386,9 @@ section {
     display: none;
   }
   .nav .nav_burger {
+    display: block;
+  }
+  .nav .nav_contacts-mobile {
     display: block;
   }
   .header .nav_contacts {
