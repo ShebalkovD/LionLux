@@ -4,7 +4,6 @@ let line1 = document.querySelector('#line')
 let line2 = document.querySelector('#line2')
 let section_category = document.querySelector('.category')
 
-
 let options2 = {
     root: null,
     rootMargin: "0px",
@@ -26,12 +25,8 @@ function start_animation(entries, observer) {
             })
         }, 1500)
     }
-    
-
-   
-    
 }
 
-let observer = new IntersectionObserver( start_animation, options2);
+let observer = new IntersectionObserver(start_animation, options2);
 let category_section = document.querySelector(".triangle2");
 observer.observe(category_section)

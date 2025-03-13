@@ -455,9 +455,6 @@ section {
   background-color: transparent;
 }
 .header .nav_contacts {
-  background-color: transparent;
-  color: #fff;
-  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,6 +464,10 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #A4814E;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  font-size: 1.6rem;
   opacity: 0.8;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
@@ -736,11 +737,14 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 2rem;
+  gap: 1rem;
 }
 .header .burger_menu_list-item#mobile_catalog_btn img {
   display: block;
   width: 1.4rem;
+  -webkit-transform: translate(0.2rem, 0.2rem);
+      -ms-transform: translate(0.2rem, 0.2rem);
+          transform: translate(0.2rem, 0.2rem);
 }
 .header .burger_menu_list-item:hover {
   cursor: pointer;
@@ -866,15 +870,15 @@ section {
   background: linear-gradient(179.11deg, #1F233F -33.3%, #15161D 65.85%);
 }
 .main .first_logo {
-  width: 91rem;
+  width: 70rem;
   height: 20rem;
   max-width: 90%;
 }
 .main .first_divider {
-  width: 60rem;
+  width: 54rem;
   height: 2px;
   background-color: #A4814E;
-  margin-top: 6.4rem;
+  margin-top: 2.4rem;
 }
 .main .first_subtitle {
   font-size: 2.4rem;

@@ -1,4 +1,3 @@
-
 const scroll_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -13,12 +12,7 @@ const scroll_observer = new IntersectionObserver((entries) => {
    
 });
 
-
-
-
 let targets = document.querySelectorAll(".animated_fadeup");
-
-for (let index = 0; index < targets.length; index++) {
-    const target = targets[index];
+for (let target of targets) {
     scroll_observer.observe(target)
 }

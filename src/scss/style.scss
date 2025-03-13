@@ -103,12 +103,16 @@
         }
 
         &_contacts {
-            background-color: transparent;
-            color: #fff;
-            font-size: 1.6rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            
+            background-color: $accent;
+            color: #fff;
+            padding: 0.2rem 1rem;
+
+            font-size: 1.6rem;
+
             opacity: 0.8;
             transition: opacity 0.2s ease-in-out;
 
@@ -386,11 +390,12 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding-right: 2rem;
+                    gap: 1rem;
 
                     img {
                         display: block;
                         width: 1.4rem;
+                        transform: translate(0.2rem, 0.2rem);
                     }
                 }
 
@@ -524,17 +529,17 @@
 
 
         &_logo {
-            width: 91rem;
+            width: 70rem;
             height: 20rem;
 
             max-width: 90%;
         }
 
         &_divider {
-            width: 60rem;
+            width: 54rem;
             height: 2px;
             background-color: $accent;
-            margin-top: 6.4rem;
+            margin-top: 2.4rem;
         }
 
         &_subtitle {
