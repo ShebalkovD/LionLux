@@ -20,18 +20,85 @@ let nav_observer = new IntersectionObserver( change_nav, options);
 let target = document.querySelector(".header_observertrigger");
 nav_observer.observe(target)
 
+function getScrollBarWidth () {
+    var inner = document.createElement('p');
+    inner.style.width = "100%";
+    inner.style.height = "200px";
+  
+    var outer = document.createElement('div');
+    outer.style.position = "absolute";
+    outer.style.top = "0px";
+    outer.style.left = "0px";
+    outer.style.visibility = "hidden";
+    outer.style.width = "200px";
+    outer.style.height = "150px";
+    outer.style.overflow = "hidden";
+    outer.appendChild (inner);
+  
+    document.body.appendChild (outer);
+    var w1 = inner.offsetWidth;
+    outer.style.overflow = 'scroll';
+    var w2 = inner.offsetWidth;
+    if (w1 == w2) w2 = outer.clientWidth;
+  
+    document.body.removeChild (outer);
+  
+    return (w1 - w2);
+  };
+
 const nav_catalog_btn = document.querySelector('#nav_catalog_button');
+const catalog_container = document.querySelector('.header_catalog .container')
+const blur_block = document.querySelector('.blur_block')
+
+function openHeaderCatalog() {
+    let scrollWidth = getScrollBarWidth()
+    body.style.paddingRight = scrollWidth + 'px'
+    // catalog_container.style.paddingRight = scrollWidth + 'px'
+    nav.style.paddingRight = scrollWidth + 'px'
+    body.classList.add('no_scroll')
+    catalog.classList.add('active')
+    blur_block.classList.add('active')
+    setTimeout(function(){
+        catalog_container.classList.add('active')
+    }, 500)
+}
+
+function closeHeaderCatalog() {
+    catalog_container.classList.remove('active')
+    setTimeout(function(){
+        catalog.classList.remove('active')
+        body.classList.remove('no_scroll')
+        body.style.paddingRight = 0 + 'px'
+        nav.style.paddingRight = 0 + 'px'
+        blur_block.classList.remove('active')
+    }, 500)
+    
+}
 
 nav_catalog_btn.addEventListener('click', function() {
     let posTop = window.scrollY;
     
     if (catalog.classList.contains('active') && posTop === 0) {
-        nav.classList.remove('nav_fixed')
+        setTimeout(function(){
+            nav.classList.remove('nav_fixed')
+        }, 500)
     }else {
         nav.classList.add('nav_fixed')
     }
     
-    catalog.classList.toggle('active')
+    catalog.classList.contains('active') ? closeHeaderCatalog() : openHeaderCatalog()
+})
+
+blur_block.addEventListener('click', function(){
+    let posTop = window.scrollY;
+    if (catalog.classList.contains('active') && posTop === 0) {
+        setTimeout(function(){
+            nav.classList.remove('nav_fixed')
+        }, 500)
+    }else {
+        nav.classList.add('nav_fixed')
+    }
+    closeHeaderCatalog()
 })
 
 let burger_btn = document.querySelector("#nav_burger")
@@ -63,8 +130,6 @@ burger_close_btn.addEventListener("click", function() {
 })
 
 // Работа Каталога в мобильном меню
-
-
 burger_catalog_btn.addEventListener("click", function() {
     burger_catalog_close_btn.classList.add("active")
     burger_list.classList.remove("burger_menu_list-active")
