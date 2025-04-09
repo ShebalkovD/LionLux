@@ -49,11 +49,12 @@ function getScrollBarWidth () {
 const nav_catalog_btn = document.querySelector('#nav_catalog_button');
 const catalog_container = document.querySelector('.header_catalog .container')
 const blur_block = document.querySelector('.blur_block')
+const header_catalog_buttons = document.querySelectorAll('.header_catalog_list_item')
 
 function openHeaderCatalog() {
+    blur_block.style.display = 'block'  
     let scrollWidth = getScrollBarWidth()
     body.style.paddingRight = scrollWidth + 'px'
-    // catalog_container.style.paddingRight = scrollWidth + 'px'
     nav.style.paddingRight = scrollWidth + 'px'
     body.classList.add('no_scroll')
     catalog.classList.add('active')
@@ -65,12 +66,13 @@ function openHeaderCatalog() {
 
 function closeHeaderCatalog() {
     catalog_container.classList.remove('active')
+    blur_block.classList.remove('active')
     setTimeout(function(){
         catalog.classList.remove('active')
         body.classList.remove('no_scroll')
         body.style.paddingRight = 0 + 'px'
         nav.style.paddingRight = 0 + 'px'
-        blur_block.classList.remove('active')
+        blur_block.style.display = 'none'
     }, 500)
     
 }
@@ -99,6 +101,23 @@ blur_block.addEventListener('click', function(){
         nav.classList.add('nav_fixed')
     }
     closeHeaderCatalog()
+})
+
+header_catalog_buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        header_catalog_buttons.forEach(button => {
+            button.classList.remove('header_catalog_list_item-active')
+            let sublist = button.querySelector('.header_catalog_sublist')
+            if (sublist != undefined) {
+                sublist.classList.remove('header_catalog_sublist-active')
+            }
+        })
+        button.classList.add('header_catalog_list_item-active')
+        let sublist = button.querySelector('.header_catalog_sublist')
+        if (sublist != undefined) {
+            sublist.classList.add('header_catalog_sublist-active')
+        }
+    })
 })
 
 let burger_btn = document.querySelector("#nav_burger")

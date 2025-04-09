@@ -118,6 +118,8 @@ section {
     padding: 0;
     margin: 0;
 
+    background-color: rgba(0, 0, 0, 0.209);
+
     position: fixed;
     top: 0;
     left: 0;
@@ -127,7 +129,7 @@ section {
     backdrop-filter: blur(5px);
     opacity: 0;
     display: none;
-
+    transition: opacity 0.5s ease-in-out;
     &:hover {
         cursor: pointer;
 
@@ -138,8 +140,7 @@ section {
     }
 
     &.active {
-        animation: blur_block 0.5s ease-in-out forwards;
-        display: block;
+        opacity: 1;
     }
 
     &_text {
@@ -155,15 +156,5 @@ section {
         transform: translate(-50%, 3rem);
         transition: 0.2s ease-in-out;
         transition-property: transform, opacity;
-    }
-}
-
-@keyframes blur_block {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }

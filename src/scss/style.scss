@@ -212,9 +212,10 @@
                 align-items: start;
                 justify-content: space-between;
                 padding: 0.5rem;
+                padding-left: 0;
                 width: 100%;
                 color: white;
-                opacity: 0.8;
+                opacity: 0.6;
                 transition: all 0.1s ease-in-out;
                 span {
                     display: inline-block;
@@ -261,6 +262,17 @@
         }
         
         &_sublist {
+            position: absolute;
+            top: 0;
+            right: -12rem;
+            display: none;
+            opacity: 0;
+
+            &-active {
+                display: block; 
+                animation: sublist_fadein 0.4s ease-in-out forwards;
+            }
+
             &_item {
                 font-size: 1.8rem;
                 line-height: 1.8rem;
@@ -275,21 +287,30 @@
                     text-decoration: underline 1px;
                 }
             }
+
             a {
                 text-decoration: none;
                 color: inherit;
             }
+
+            @keyframes sublist_fadein {
+                from {
+                    opacity: 0;
+                    transform: translateX(-2rem);
+                }
+
+                to {
+                    transform: none;
+                    opacity: 1;
+                }
+            }
         }
         
-        
-
         &.active {
             opacity: 1;
             transform: translateY(0%);
             box-shadow: $shadow_bottom;
         }
-
-
     }   
 
     &_observertrigger {

@@ -200,6 +200,7 @@ section {
   height: 100vh;
   padding: 0;
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.209);
   position: fixed;
   top: 0;
   left: 0;
@@ -208,6 +209,8 @@ section {
           backdrop-filter: blur(5px);
   opacity: 0;
   display: none;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .blur_block:hover {
   cursor: pointer;
@@ -219,9 +222,7 @@ section {
           transform: translate(-50%, 0);
 }
 .blur_block.active {
-  -webkit-animation: blur_block 0.5s ease-in-out forwards;
-          animation: blur_block 0.5s ease-in-out forwards;
-  display: block;
+  opacity: 1;
 }
 .blur_block_text {
   background-color: #1C1D26;
@@ -245,23 +246,6 @@ section {
   transition-property: transform, opacity, -webkit-transform;
 }
 
-@-webkit-keyframes blur_block {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes blur_block {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .preloader {
   width: 100%;
   height: 100dvh;
@@ -646,9 +630,10 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem;
+  padding-left: 0;
   width: 100%;
   color: white;
-  opacity: 0.8;
+  opacity: 0.6;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
@@ -688,6 +673,18 @@ section {
   background-color: #15161D;
   opacity: 0.5;
 }
+.header_catalog_sublist {
+  position: absolute;
+  top: 0;
+  right: -12rem;
+  display: none;
+  opacity: 0;
+}
+.header_catalog_sublist-active {
+  display: block;
+  -webkit-animation: sublist_fadein 0.4s ease-in-out forwards;
+          animation: sublist_fadein 0.4s ease-in-out forwards;
+}
 .header_catalog_sublist_item {
   font-size: 1.8rem;
   line-height: 1.8rem;
@@ -706,6 +703,30 @@ section {
 .header_catalog_sublist a {
   text-decoration: none;
   color: inherit;
+}
+@-webkit-keyframes sublist_fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+@keyframes sublist_fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
 }
 .header_catalog.active {
   opacity: 1;
