@@ -1,3 +1,5 @@
+
+
 let nav = document.querySelector('#nav')
 let catalog = document.querySelector('#header_catalog')
 let body = document.querySelector("body")
@@ -24,7 +26,7 @@ function getScrollBarWidth () {
     var inner = document.createElement('p');
     inner.style.width = "100%";
     inner.style.height = "200px";
-  
+
     var outer = document.createElement('div');
     outer.style.position = "absolute";
     outer.style.top = "0px";
@@ -34,17 +36,17 @@ function getScrollBarWidth () {
     outer.style.height = "150px";
     outer.style.overflow = "hidden";
     outer.appendChild (inner);
-  
+
     document.body.appendChild (outer);
     var w1 = inner.offsetWidth;
     outer.style.overflow = 'scroll';
     var w2 = inner.offsetWidth;
     if (w1 == w2) w2 = outer.clientWidth;
-  
+
     document.body.removeChild (outer);
-  
+
     return (w1 - w2);
-  };
+};
 
 const nav_catalog_btn = document.querySelector('#nav_catalog_button');
 const catalog_container = document.querySelector('.header_catalog .container')
@@ -127,11 +129,17 @@ let burger_catalog_btn = document.querySelector("#mobile_catalog_btn")
 let burger_catalog_close_btn = document.querySelector("#burger_catalog_close")
 let burger_list= document.querySelector("#burger_list")
 let burger_catalog= document.querySelector("#burger_catalog")
+let burger_catalog_buttons = document.querySelectorAll(".burger_menu_catalog_list_item")
+let burger_catalog_sublists = document.querySelectorAll('.burger_menu_catalog_sublist')
 
 // Работа мобильного меню
 burger_btn.addEventListener("click", function() {
     burger_menu.style.display = "flex";
     body.classList.add("no_scroll")
+    burger_catalog_sublists.forEach(list => {
+        let height = list.offsetHeight
+        list.style.marginTop = `-${height}px`
+    })
     setTimeout(function(){
         burger_menu.classList.add("burger_menu-active")
     }, 100)
@@ -140,6 +148,10 @@ burger_btn.addEventListener("click", function() {
 burger_close_btn.addEventListener("click", function() {
     burger_menu.classList.remove("burger_menu-active")
     body.classList.remove("no_scroll")
+    burger_catalog_sublists.forEach(list => {
+        let height = list.offsetHeight
+        list.style.marginTop = `-${height}px`
+    })
     setTimeout(function(){
         burger_menu.style.display = "none";
         burger_catalog.classList.remove("burger_menu_catalog-active")
@@ -160,3 +172,25 @@ burger_catalog_close_btn.addEventListener("click", function() {
     burger_catalog.classList.remove("burger_menu_catalog-active")
     burger_list.classList.add("burger_menu_list-active")
 })
+
+
+
+
+burger_catalog_buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // burger_catalog_buttons.forEach(button => {
+        //     button.classList.remove('active')
+        // })
+
+        button.classList.toggle('active')
+        let sublist = button.querySelector('.burger_menu_catalog_sublist')
+
+        if (button.classList.contains('active')) {
+            sublist.style.marginTop = '2rem'
+        }else {
+            sublist.style.marginTop = `-${sublist.offsetHeight}px`
+        }
+    })
+})
+
+
