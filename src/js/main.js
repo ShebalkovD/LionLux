@@ -157,7 +157,7 @@ burger_close_btn.addEventListener("click", function() {
 
         burger_catalog_sublists.forEach(list => {
             let height = list.offsetHeight
-            list.style.marginTop = `-${height}px`
+            list.style.marginTop = `-${height + 10}px`
         })
         burger_catalog_buttons.forEach(button => {
             button.classList.remove('active')
