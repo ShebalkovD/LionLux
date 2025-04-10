@@ -967,6 +967,7 @@ section {
 .header .burger_menu_catalog_list_item {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 .header .burger_menu_catalog_list_item_button {
   width: 100%;

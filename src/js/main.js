@@ -178,20 +178,12 @@ burger_catalog_close_btn.addEventListener("click", function() {
     burger_list.classList.add("burger_menu_list-active")
 })
 
-
-
-
 burger_catalog_buttons.forEach(button => {
     button.addEventListener('click', function() {
-        // burger_catalog_buttons.forEach(button => {
-        //     button.classList.remove('active')
-        // })
-
         button.classList.toggle('active')
         let sublist = button.querySelector('.burger_menu_catalog_sublist')
-
         if (button.classList.contains('active')) {
-            sublist.style.marginTop = '2rem'
+            sublist.style.marginTop = '1rem'
         }else {
             sublist.style.marginTop = `-${sublist.offsetHeight}px`
         }
