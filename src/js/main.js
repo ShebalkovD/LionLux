@@ -148,15 +148,20 @@ burger_btn.addEventListener("click", function() {
 burger_close_btn.addEventListener("click", function() {
     burger_menu.classList.remove("burger_menu-active")
     body.classList.remove("no_scroll")
-    burger_catalog_sublists.forEach(list => {
-        let height = list.offsetHeight
-        list.style.marginTop = `-${height}px`
-    })
+    
     setTimeout(function(){
         burger_menu.style.display = "none";
         burger_catalog.classList.remove("burger_menu_catalog-active")
         burger_list.classList.add("burger_menu_list-active")
         burger_catalog_close_btn.classList.remove("active")
+
+        burger_catalog_sublists.forEach(list => {
+            let height = list.offsetHeight
+            list.style.marginTop = `-${height}px`
+        })
+        burger_catalog_buttons.forEach(button => {
+            button.classList.remove('active')
+        })
     }, 200)
 })
 
