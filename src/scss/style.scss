@@ -516,6 +516,7 @@
                 width: 100%;
                 position: relative;
                 padding-left: 7.2rem;
+                padding-bottom: 15vh;
 
                 &_item {
                     width: 100%;
@@ -526,7 +527,6 @@
                         display: flex;
                         align-items: start;
                         justify-content: space-between;
-                        padding: 1rem;
                         background-color: $section_bg;
                         position: relative;
                         z-index: 2000;
