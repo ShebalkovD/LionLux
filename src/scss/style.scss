@@ -106,25 +106,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
             
-            background-color: transparent;
+            background-color: $accent;
             color: #fff;
-            padding: 0.2rem 1rem;
+            padding: 0.5rem 1rem;
 
             font-size: 1.6rem;
 
-            opacity: 0.8;
-            transition: opacity 0.2s ease-in-out;
+            opacity: 1;
+            transition: background-color 0.2s ease-in-out;
 
             position: relative;
 
             &:hover {
-                opacity: 1;
+                background-color: $accent_dark;
             }
 
-            span {
-                text-decoration: underline $accent;
+            &:active {
+                background-color: $accent_super_dark;
             }
 
             &-mobile {
@@ -194,29 +194,43 @@
             font-weight: 700;
             color: white;
             margin-bottom: 6.4rem;
+
+            &_button {
+                transition: opacity 0.3s ease-in-out;
+                opacity: 0.04;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+
         }
 
         &_list {
-            max-width: 40rem;
-            height: fit-content;
+            width: 54rem;
+            height: 35vh;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: start;
             align-items: start;
-            gap: 1.6rem;
-            padding-right: 6rem;
 
             &_item {
                 display: flex;
                 align-items: start;
                 justify-content: space-between;
-                padding: 0.5rem;
-                padding-left: 0;
+                padding: 1.5rem 2rem;
+                font-size: 2.4rem;
+                line-height: 2.4rem;
                 width: 100%;
                 color: white;
-                opacity: 0.6;
-                transition: all 0.1s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                
                 span {
                     display: inline-block;
                     margin-right: 2rem;
@@ -232,15 +246,22 @@
                 }
 
                 &:hover {
-                    opacity: 1;
                     cursor: pointer;
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.107);
+                    svg {
+                        transform: translateY(0.4rem);
+                        path {
+                            stroke: white;
+                        }
+                    }
                 }
 
                 &-active {
-                    color: $accent;
                     opacity: 1;
-                    svg path {
-                        stroke: $accent;
+                    background-color: $accent;
+                    &:hover {
+                        background-color: $accent;
                     }
                 }
             }
@@ -254,7 +275,7 @@
 
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: -0.4rem;
 
                 background-color: $section_bg;
                 opacity: 0.5;
@@ -264,7 +285,7 @@
         &_sublist {
             position: absolute;
             top: 0;
-            right: -12rem;
+            right: -30.4rem;
             display: none;
             opacity: 0;
 
@@ -273,22 +294,50 @@
                 animation: sublist_fadein 0.4s ease-in-out forwards;
             }
 
+            &_wrapper {
+                height: 42vh;
+                overflow-y: scroll;
+                scrollbar-width: thin;
+                position: relative;
+                padding-bottom: 10rem;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 4rem;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+
+                    background-image: linear-gradient(transparent, $contrast_bg);
+                    z-index: 1200;
+                }
+
+            }
+
             &_item {
-                font-size: 1.8rem;
-                line-height: 1.8rem;
+                font-size: 2.4rem;
                 font-weight: 400;
                 color: white;
-                margin-bottom: 1rem;
                 opacity: 0.8;
-                transition: opacity 0.1s ease-in-out;
+                display: block;
+                width: fit-content;
+                
+                transition: all 0.2s ease-in-out;
 
                 &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.107);
                     opacity: 1;
-                    text-decoration: underline 1px;
                 }
             }
 
             a {
+                display: block;
+                width: 30rem;
+                padding: 1.5rem 2rem;
                 text-decoration: none;
                 color: inherit;
             }

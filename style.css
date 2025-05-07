@@ -515,22 +515,21 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.5rem;
-  background-color: transparent;
+  gap: 1rem;
+  background-color: #A4814E;
   color: #fff;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.6rem;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   position: relative;
 }
 .header .nav_contacts:hover {
-  opacity: 1;
+  background-color: #977748;
 }
-.header .nav_contacts span {
-  -webkit-text-decoration: underline #A4814E;
-          text-decoration: underline #A4814E;
+.header .nav_contacts:active {
+  background-color: #82673f;
 }
 .header .nav_contacts-mobile {
   opacity: 0.8;
@@ -597,11 +596,21 @@ section {
   color: white;
   margin-bottom: 6.4rem;
 }
+.header_catalog_title_button {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.04;
+}
+.header_catalog_title_button.active {
+  opacity: 1;
+}
+.header_catalog_title_button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 .header_catalog_list {
-  max-width: 40rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 54rem;
+  height: 35vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,8 +625,6 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: 1.6rem;
-  padding-right: 6rem;
 }
 .header_catalog_list_item {
   display: -webkit-box;
@@ -629,13 +636,13 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5rem;
-  padding-left: 0;
+  padding: 1.5rem 2rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
   width: 100%;
   color: white;
-  opacity: 0.6;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .header_catalog_list_item span {
   display: inline-block;
@@ -652,15 +659,24 @@ section {
           transform: translateY(0.4rem);
 }
 .header_catalog_list_item:hover {
-  opacity: 1;
   cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.107);
+}
+.header_catalog_list_item:hover svg {
+  -webkit-transform: translateY(0.4rem);
+      -ms-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+}
+.header_catalog_list_item:hover svg path {
+  stroke: white;
 }
 .header_catalog_list_item-active {
-  color: #A4814E;
   opacity: 1;
+  background-color: #A4814E;
 }
-.header_catalog_list_item-active svg path {
-  stroke: #A4814E;
+.header_catalog_list_item-active:hover {
+  background-color: #A4814E;
 }
 .header_catalog_list::after {
   content: "";
@@ -669,14 +685,14 @@ section {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -0.4rem;
   background-color: #15161D;
   opacity: 0.5;
 }
 .header_catalog_sublist {
   position: absolute;
   top: 0;
-  right: -12rem;
+  right: -30.4rem;
   display: none;
   opacity: 0;
 }
@@ -685,22 +701,47 @@ section {
   -webkit-animation: sublist_fadein 0.4s ease-in-out forwards;
           animation: sublist_fadein 0.4s ease-in-out forwards;
 }
+.header_catalog_sublist_wrapper {
+  height: 42vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  position: relative;
+  padding-bottom: 10rem;
+}
+.header_catalog_sublist_wrapper::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1C1D26));
+  background-image: linear-gradient(transparent, #1C1D26);
+  z-index: 1200;
+}
 .header_catalog_sublist_item {
-  font-size: 1.8rem;
-  line-height: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
   color: white;
-  margin-bottom: 1rem;
   opacity: 0.8;
-  -webkit-transition: opacity 0.1s ease-in-out;
-  transition: opacity 0.1s ease-in-out;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .header_catalog_sublist_item:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.107);
   opacity: 1;
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
 }
 .header_catalog_sublist a {
+  display: block;
+  width: 30rem;
+  padding: 1.5rem 2rem;
   text-decoration: none;
   color: inherit;
 }

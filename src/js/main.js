@@ -58,6 +58,7 @@ function openHeaderCatalog() {
     let scrollWidth = getScrollBarWidth()
     body.style.paddingRight = scrollWidth + 'px'
     nav.style.paddingRight = scrollWidth + 'px'
+    catalog.style.paddingRight = scrollWidth + 'px'
     body.classList.add('no_scroll')
     catalog.classList.add('active')
     blur_block.classList.add('active')
@@ -74,6 +75,7 @@ function closeHeaderCatalog() {
         body.classList.remove('no_scroll')
         body.style.paddingRight = 0 + 'px'
         nav.style.paddingRight = 0 + 'px'
+        catalog.style.paddingRight = 0 + 'px'
         blur_block.style.display = 'none'
     }, 500)
     
