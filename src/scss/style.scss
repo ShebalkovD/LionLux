@@ -176,6 +176,7 @@
             opacity: 0;
             transform: translateY(-1rem);
             transition: all 0.5s ease-in-out;
+            position: static;
             &.active {
                 opacity: 1;
                 transform: translateY(0);
@@ -187,6 +188,9 @@
             justify-content: start;
             align-items: start;
             gap: 6rem;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
         }
 
         &_title {
@@ -213,12 +217,12 @@
 
         &_list {
             width: 54rem;
-            height: 35vh;
-            position: relative;
+            height: 42vh;
             display: flex;
             flex-direction: column;
             justify-content: start;
             align-items: start;
+            position: relative;
 
             &_item {
                 display: flex;
@@ -267,25 +271,24 @@
             }
 
 
-            &::after {
+            &::before {
                 content: "";
                 display: block;
-                width: 0.4rem;
-                height: 100%;
+                width: 100%;
+                height: 6rem;
+                position: fixed;
+                bottom: -1rem;
+                left: 0;
 
-                position: absolute;
-                top: 0;
-                right: -0.4rem;
-
-                background-color: $section_bg;
-                opacity: 0.5;
+                background-image: linear-gradient(transparent, $contrast_bg, $contrast_bg);
+                z-index: 1200;
             }
         }
         
         &_sublist {
-            position: absolute;
-            top: 0;
-            right: -30.4rem;
+            position: fixed;
+            top: 9.2rem;
+            left: 56.4rem;
             display: none;
             opacity: 0;
 
@@ -296,22 +299,43 @@
 
             &_wrapper {
                 height: 42vh;
+                width: 100%;
                 overflow-y: scroll;
-                scrollbar-width: thin;
-                position: relative;
-                padding-bottom: 10rem;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+
+                
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 0.4rem;
+                    height: 100%;
+    
+                    position: absolute;
+                    top: 0;
+                    right: -0.4rem;
+    
+                    background-color: $section_bg;
+                    opacity: 0.5;
+
+                    z-index: 1300;
+                }   
 
                 &::after {
                     content: "";
                     display: block;
-                    width: 100%;
-                    height: 4rem;
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
+                    width: 0.4rem;
+                    height: 100%;
+    
+                    position: absolute;
+                    top: 0;
+                    left: -0.4rem;
+    
+                    background-color: $section_bg;
+                    opacity: 0.5;
 
-                    background-image: linear-gradient(transparent, $contrast_bg);
-                    z-index: 1200;
+                    z-index: 1300;
                 }
 
             }

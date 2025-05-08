@@ -571,6 +571,7 @@ section {
           transform: translateY(-1rem);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  position: static;
 }
 .header_catalog .container.active {
   opacity: 1;
@@ -589,6 +590,9 @@ section {
       -ms-flex-align: start;
           align-items: start;
   gap: 6rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .header_catalog_title {
   font-size: 4.8rem;
@@ -610,8 +614,7 @@ section {
 }
 .header_catalog_list {
   width: 54rem;
-  height: 35vh;
-  position: relative;
+  height: 42vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,6 +628,7 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  position: relative;
 }
 .header_catalog_list_item {
   display: -webkit-box;
@@ -678,21 +682,22 @@ section {
 .header_catalog_list_item-active:hover {
   background-color: #A4814E;
 }
-.header_catalog_list::after {
+.header_catalog_list::before {
   content: "";
   display: block;
-  width: 0.4rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: -0.4rem;
-  background-color: #15161D;
-  opacity: 0.5;
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  bottom: -1rem;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(#1C1D26), to(#1C1D26));
+  background-image: linear-gradient(transparent, #1C1D26, #1C1D26);
+  z-index: 1200;
 }
 .header_catalog_sublist {
-  position: absolute;
-  top: 0;
-  right: -30.4rem;
+  position: fixed;
+  top: 9.2rem;
+  left: 56.4rem;
   display: none;
   opacity: 0;
 }
@@ -703,22 +708,34 @@ section {
 }
 .header_catalog_sublist_wrapper {
   height: 42vh;
+  width: 100%;
   overflow-y: scroll;
-  scrollbar-width: thin;
-  position: relative;
-  padding-bottom: 10rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.header_catalog_sublist_wrapper::before {
+  content: "";
+  display: block;
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -0.4rem;
+  background-color: #15161D;
+  opacity: 0.5;
+  z-index: 1300;
 }
 .header_catalog_sublist_wrapper::after {
   content: "";
   display: block;
-  width: 100%;
-  height: 4rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1C1D26));
-  background-image: linear-gradient(transparent, #1C1D26);
-  z-index: 1200;
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -0.4rem;
+  background-color: #15161D;
+  opacity: 0.5;
+  z-index: 1300;
 }
 .header_catalog_sublist_item {
   font-size: 2.4rem;
@@ -2591,6 +2608,9 @@ section {
   }
   html {
     font-size: 9px;
+  }
+  .header_catalog {
+    height: 72vh;
   }
   .main .fasad_img {
     width: 40%;
