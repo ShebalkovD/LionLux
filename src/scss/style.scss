@@ -151,7 +151,7 @@
         top: 6rem;
         left: 0;
 
-        overflow-x: auto;
+        overflow: hidden;
         scrollbar-width: 0px;
 
         z-index: 100;
@@ -181,6 +181,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
 
         &_wrapper {
@@ -217,7 +218,7 @@
 
         &_list {
             width: 54rem;
-            height: 42vh;
+            height: 32vh;
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -234,7 +235,7 @@
                 line-height: 2.4rem;
                 width: 100%;
                 color: white;
-                transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-out;
                 
                 span {
                     display: inline-block;
@@ -292,21 +293,18 @@
             left: 56.4rem;
             display: none;
             
-
             &-active {
                 display: block; 
                
             }
 
             &_wrapper {
-                height: 42vh;
+                height: 32vh;
                 width: 100%;
                 overflow-y: scroll;
                 scroll-behavior: smooth;
                 scrollbar-width: none;
                 cursor: default;
-
-                
 
                 &::before {
                     content: "";
@@ -351,7 +349,7 @@
                 width: fit-content;
                 animation: sublist_fadein 0.4s ease-in-out forwards;
                 
-                transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-out;
 
                 &:hover {
                     cursor: pointer;

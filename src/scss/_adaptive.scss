@@ -21,6 +21,14 @@
     .header {
         &_catalog {
             height: 72vh;
+
+            &_list {
+                height: 44vh;
+            }
+
+            &_sublist_wrapper {
+                height: 44vh;
+            }
         }
     }
 

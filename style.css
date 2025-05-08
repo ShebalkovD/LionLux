@@ -548,7 +548,7 @@ section {
   position: fixed;
   top: 6rem;
   left: 0;
-  overflow-x: auto;
+  overflow: hidden;
   scrollbar-width: 0px;
   z-index: 100;
   width: 100%;
@@ -614,7 +614,7 @@ section {
 }
 .header_catalog_list {
   width: 54rem;
-  height: 42vh;
+  height: 32vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,8 +646,8 @@ section {
   line-height: 2.4rem;
   width: 100%;
   color: white;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .header_catalog_list_item span {
   display: inline-block;
@@ -705,7 +705,7 @@ section {
   display: block;
 }
 .header_catalog_sublist_wrapper {
-  height: 42vh;
+  height: 32vh;
   width: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -747,8 +747,8 @@ section {
   width: fit-content;
   -webkit-animation: sublist_fadein 0.4s ease-in-out forwards;
           animation: sublist_fadein 0.4s ease-in-out forwards;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .header_catalog_sublist_item:hover {
   cursor: pointer;
@@ -2612,6 +2612,12 @@ section {
   }
   .header_catalog {
     height: 72vh;
+  }
+  .header_catalog_list {
+    height: 44vh;
+  }
+  .header_catalog_sublist_wrapper {
+    height: 44vh;
   }
   .main .fasad_img {
     width: 40%;
