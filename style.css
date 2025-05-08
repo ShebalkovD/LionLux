@@ -710,6 +710,7 @@ section {
   overflow-y: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  cursor: default;
 }
 .header_catalog_sublist_wrapper::before {
   content: "";
